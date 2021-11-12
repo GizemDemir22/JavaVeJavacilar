@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace JavaVeJavacilar.Models
 {
-    public enum Corbalar:byte
+    public class Icecek
     {
-        MercimekCorbasi,
-        DomatesCorbasi,
-        BrokoliCorbasi
-
+        public string IcecekAdi { get; set; }
+        public int Fiyat { get; set; }
     }
 }

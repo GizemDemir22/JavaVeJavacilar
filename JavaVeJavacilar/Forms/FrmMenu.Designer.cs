@@ -126,6 +126,7 @@ namespace JavaVeJavacilar.Forms
             this.Controls.Add(this.btnCorba);
             this.Name = "FrmMenu";
             this.Text = "FrmMenu";
+            this.Load += new System.EventHandler(this.FrmMenu_Load);
             this.ResumeLayout(false);
 
         }
