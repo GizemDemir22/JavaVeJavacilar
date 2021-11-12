@@ -80,10 +80,10 @@ namespace JavaVeJavacilar.Forms
             // flpLayoutPanel
             // 
             this.flpLayoutPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("flpLayoutPanel.BackgroundImage")));
-            this.flpLayoutPanel.Location = new System.Drawing.Point(32, 173);
+            this.flpLayoutPanel.Location = new System.Drawing.Point(32, 144);
             this.flpLayoutPanel.Name = "flpLayoutPanel";
-            this.flpLayoutPanel.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.flpLayoutPanel.Size = new System.Drawing.Size(742, 437);
+            this.flpLayoutPanel.Padding = new System.Windows.Forms.Padding(5);
+            this.flpLayoutPanel.Size = new System.Drawing.Size(802, 447);
             this.flpLayoutPanel.TabIndex = 4;
             // 
             // FrmFloorSelection
@@ -91,7 +91,7 @@ namespace JavaVeJavacilar.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(1190, 667);
+            this.ClientSize = new System.Drawing.Size(994, 667);
             this.Controls.Add(this.flpLayoutPanel);
             this.Controls.Add(this.btnTerasK);
             this.Controls.Add(this.btnKat2);

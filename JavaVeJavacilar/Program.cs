@@ -18,7 +18,7 @@ namespace JavaVeJavacilar
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmWaiterLogin());
+            Application.Run(new FrmFloorSelection());
         }
     }
 }

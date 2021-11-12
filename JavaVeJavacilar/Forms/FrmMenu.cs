@@ -21,5 +21,10 @@ namespace JavaVeJavacilar.Forms
         {
 
         }
+
+        private void flowLayoutMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -36,6 +36,7 @@ namespace JavaVeJavacilar.Forms
             this.btnTatlılar = new System.Windows.Forms.Button();
             this.btnSıcakİcecekler = new System.Windows.Forms.Button();
             this.btnSogukİcecekler = new System.Windows.Forms.Button();
+            this.flowLayoutMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // btnCorba
@@ -102,11 +103,20 @@ namespace JavaVeJavacilar.Forms
             this.btnSogukİcecekler.Text = "Soğuk İçecekler";
             this.btnSogukİcecekler.UseVisualStyleBackColor = true;
             // 
+            // flowLayoutMenu
+            // 
+            this.flowLayoutMenu.Location = new System.Drawing.Point(12, 88);
+            this.flowLayoutMenu.Name = "flowLayoutMenu";
+            this.flowLayoutMenu.Size = new System.Drawing.Size(786, 350);
+            this.flowLayoutMenu.TabIndex = 7;
+            this.flowLayoutMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutMenu_Paint);
+            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(858, 450);
+            this.Controls.Add(this.flowLayoutMenu);
             this.Controls.Add(this.btnSogukİcecekler);
             this.Controls.Add(this.btnSıcakİcecekler);
             this.Controls.Add(this.btnTatlılar);
@@ -129,5 +139,6 @@ namespace JavaVeJavacilar.Forms
         private System.Windows.Forms.Button btnTatlılar;
         private System.Windows.Forms.Button btnSıcakİcecekler;
         private System.Windows.Forms.Button btnSogukİcecekler;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutMenu;
     }
 }
