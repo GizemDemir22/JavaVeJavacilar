@@ -23,12 +23,11 @@ namespace JavaVeJavacilar.Forms
 
         private void FrmWaiterLogin_Load(object sender, EventArgs e)
         {
-
-            FileStream fileStream = new FileStream("C:\\Users\\Admin\\Desktop\\Garson.json", FileMode.Open);
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            FileStream fileStream = new FileStream(path + "\\Garson.json", FileMode.Open);
             StreamReader reader = new StreamReader(fileStream);
             string dosyaIcerigi = reader.ReadToEnd();
             garsonlar = JsonConvert.DeserializeObject<List<Garson>>(dosyaIcerigi);
-
         }
 
         private void btnGiris_Click(object sender, EventArgs e)
@@ -49,6 +48,8 @@ namespace JavaVeJavacilar.Forms
             }
 
         }
+
+        
     }
 }
 

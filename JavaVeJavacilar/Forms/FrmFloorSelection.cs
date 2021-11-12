@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JavaVeJavacilar.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,15 +17,13 @@ namespace JavaVeJavacilar.Forms
         {
             InitializeComponent();
         }
-        private string[] Masa = new string[10];
-        private void btnBahçe_Click(object sender, EventArgs e)
+      
+        public string[] Masa = new string[10];
+        public void MasaGetir(int baslangicSayisi)
         {
-            MasaGetir();
-        }
-        public void MasaGetir()
-        {
-            for (int i = 1; i <= 8; i++)
+            for (int i = baslangicSayisi; i <= baslangicSayisi + 7; i++)
             {
+                flpLayoutPanel.Controls.Clear();
                 Button btn = new Button
                 {
                     Text = "Masa " + i,
@@ -32,34 +31,30 @@ namespace JavaVeJavacilar.Forms
                     Font = new Font("Trebuchet MS", 11.25F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(162))),
                     Size = new Size(150, 150)
                 };
-
                 flpLayoutPanel.Controls.Add(btn);
             }
         }
-
+        private void btnBahçe_Click(object sender, EventArgs e)
+        {
+            
+            MasaGetir(1);
+        }
         private void btnkat1_Click(object sender, EventArgs e)
         {
-            MasaGetir();
+          
+            MasaGetir(9);
         }
 
         private void btnKat2_Click(object sender, EventArgs e)
         {
-            MasaGetir();
+            
+            MasaGetir(17);
         }
 
         private void btnTerasK_Click(object sender, EventArgs e)
         {
-            MasaGetir();
-        }
-
-        private void FrmFloorSelection_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FrmFloorSelection_Load_1(object sender, EventArgs e)
-        {
-
+           
+            MasaGetir(25);
         }
     }
 }
