@@ -1,9 +1,11 @@
 ﻿using JavaVeJavacilar.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,22 +19,27 @@ namespace JavaVeJavacilar.Forms
         {
             InitializeComponent();
         }
-      
-        public string[] Masa = new string[10];
+
+        public List<Masa> Masalar;
         public void MasaGetir()
         {
             flpLayoutPanel.Controls.Clear();
-            for (int i = 1; i <= 8; i++)
-            {
-                Button btn = new Button
+            foreach (Masa masa in Masalar)
+            { 
+                    for (int i = 1; i <= masa.MasaSayisi; i++)
                 {
-                    Text = "Masa " + i,
-                    Name = "btn_" + i,
-                    Font = new Font("Trebuchet MS", 11.25F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(162))),
-                    Size = new Size(150, 150)
-                };
-                flpLayoutPanel.Controls.Add(btn);
+                    Button btn = new Button
+                    {
+                        Text = masa.Prefix + i.ToString(),
+                        Name = "btn" + masa.Prefix+i.ToString(),
+                        Font = new Font("Trebuchet MS", 11.25F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(162))),
+                        Size = new Size(150, 150)
+                    };
+                    flpLayoutPanel.Controls.Add(btn);
+                }
+
             }
+           
         }
         private void btnBahçe_Click(object sender, EventArgs e)
         {
@@ -55,6 +62,15 @@ namespace JavaVeJavacilar.Forms
         {
            
             MasaGetir();
+        }
+
+        private void FrmFloorSelection_Load(object sender, EventArgs e)
+        {
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            FileStream fileStream = new FileStream(path + "\\KatInfo.json", FileMode.Open);
+            StreamReader reader = new StreamReader(fileStream);
+            string dosyaIcerigi = reader.ReadToEnd();
+            Masalar = JsonConvert.DeserializeObject<List<Masa>>(dosyaIcerigi);
         }
     }
 }

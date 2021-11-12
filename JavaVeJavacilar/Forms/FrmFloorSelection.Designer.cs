@@ -39,10 +39,9 @@ namespace JavaVeJavacilar.Forms
             // 
             // btnBahçe
             // 
-            this.btnBahçe.Location = new System.Drawing.Point(28, 16);
-            this.btnBahçe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBahçe.Location = new System.Drawing.Point(32, 21);
             this.btnBahçe.Name = "btnBahçe";
-            this.btnBahçe.Size = new System.Drawing.Size(116, 79);
+            this.btnBahçe.Size = new System.Drawing.Size(133, 105);
             this.btnBahçe.TabIndex = 0;
             this.btnBahçe.Text = "Bahçe Katı";
             this.btnBahçe.UseVisualStyleBackColor = true;
@@ -50,10 +49,9 @@ namespace JavaVeJavacilar.Forms
             // 
             // btnkat1
             // 
-            this.btnkat1.Location = new System.Drawing.Point(204, 16);
-            this.btnkat1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnkat1.Location = new System.Drawing.Point(233, 21);
             this.btnkat1.Name = "btnkat1";
-            this.btnkat1.Size = new System.Drawing.Size(116, 79);
+            this.btnkat1.Size = new System.Drawing.Size(133, 105);
             this.btnkat1.TabIndex = 1;
             this.btnkat1.Text = "1. Kat";
             this.btnkat1.UseVisualStyleBackColor = true;
@@ -61,10 +59,9 @@ namespace JavaVeJavacilar.Forms
             // 
             // btnKat2
             // 
-            this.btnKat2.Location = new System.Drawing.Point(385, 16);
-            this.btnKat2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnKat2.Location = new System.Drawing.Point(440, 21);
             this.btnKat2.Name = "btnKat2";
-            this.btnKat2.Size = new System.Drawing.Size(116, 79);
+            this.btnKat2.Size = new System.Drawing.Size(133, 105);
             this.btnKat2.TabIndex = 2;
             this.btnKat2.Text = "2.Kat";
             this.btnKat2.UseVisualStyleBackColor = true;
@@ -72,10 +69,9 @@ namespace JavaVeJavacilar.Forms
             // 
             // btnTerasK
             // 
-            this.btnTerasK.Location = new System.Drawing.Point(551, 16);
-            this.btnTerasK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTerasK.Location = new System.Drawing.Point(630, 21);
             this.btnTerasK.Name = "btnTerasK";
-            this.btnTerasK.Size = new System.Drawing.Size(116, 79);
+            this.btnTerasK.Size = new System.Drawing.Size(133, 105);
             this.btnTerasK.TabIndex = 3;
             this.btnTerasK.Text = "Teras Katı";
             this.btnTerasK.UseVisualStyleBackColor = true;
@@ -84,29 +80,28 @@ namespace JavaVeJavacilar.Forms
             // flpLayoutPanel
             // 
             this.flpLayoutPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("flpLayoutPanel.BackgroundImage")));
-            this.flpLayoutPanel.Location = new System.Drawing.Point(28, 130);
-            this.flpLayoutPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.flpLayoutPanel.Location = new System.Drawing.Point(32, 173);
             this.flpLayoutPanel.Name = "flpLayoutPanel";
-            this.flpLayoutPanel.Padding = new System.Windows.Forms.Padding(4);
-            this.flpLayoutPanel.Size = new System.Drawing.Size(649, 328);
+            this.flpLayoutPanel.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.flpLayoutPanel.Size = new System.Drawing.Size(742, 437);
             this.flpLayoutPanel.TabIndex = 4;
             // 
             // FrmFloorSelection
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(1041, 500);
+            this.ClientSize = new System.Drawing.Size(1190, 667);
             this.Controls.Add(this.flpLayoutPanel);
             this.Controls.Add(this.btnTerasK);
             this.Controls.Add(this.btnKat2);
             this.Controls.Add(this.btnkat1);
             this.Controls.Add(this.btnBahçe);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmFloorSelection";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmFloorSelection";
+            this.Load += new System.EventHandler(this.FrmFloorSelection_Load);
             this.ResumeLayout(false);
 
         }
