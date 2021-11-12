@@ -19,11 +19,11 @@ namespace JavaVeJavacilar.Forms
         }
       
         public string[] Masa = new string[10];
-        public void MasaGetir(int baslangicSayisi)
+        public void MasaGetir()
         {
-            for (int i = baslangicSayisi; i <= baslangicSayisi + 7; i++)
+            flpLayoutPanel.Controls.Clear();
+            for (int i = 1; i <= 8; i++)
             {
-                flpLayoutPanel.Controls.Clear();
                 Button btn = new Button
                 {
                     Text = "Masa " + i,
@@ -37,24 +37,24 @@ namespace JavaVeJavacilar.Forms
         private void btnBahçe_Click(object sender, EventArgs e)
         {
             
-            MasaGetir(1);
+            MasaGetir();
         }
         private void btnkat1_Click(object sender, EventArgs e)
         {
           
-            MasaGetir(9);
+            MasaGetir();
         }
 
         private void btnKat2_Click(object sender, EventArgs e)
         {
             
-            MasaGetir(17);
+            MasaGetir();
         }
 
         private void btnTerasK_Click(object sender, EventArgs e)
         {
            
-            MasaGetir(25);
+            MasaGetir();
         }
     }
 }
