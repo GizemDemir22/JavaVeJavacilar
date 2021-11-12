@@ -21,12 +21,11 @@ namespace JavaVeJavacilar.Forms
         }
 
         public List<Masa> Masalar;
-        public void MasaGetir()
+        public void MasaGetir(Masa masa)
         {
             flpLayoutPanel.Controls.Clear();
-            foreach (Masa masa in Masalar)
-            { 
-                    for (int i = 1; i <= masa.MasaSayisi; i++)
+         
+                    for (int i = 1; i <= int.Parse(masa.MasaSayisi); i++)
                 {
                     Button btn = new Button
                     {
@@ -38,30 +37,54 @@ namespace JavaVeJavacilar.Forms
                     flpLayoutPanel.Controls.Add(btn);
                 }
 
-            }
            
         }
         private void btnBahçe_Click(object sender, EventArgs e)
         {
+            foreach (Masa item in Masalar)
+            {
+                if (item.KatInfo.ToLower()=="Bahçe".ToLower())
+                {
+                    MasaGetir(item);
+                }
+            }
             
-            MasaGetir();
+            
         }
         private void btnkat1_Click(object sender, EventArgs e)
         {
-          
-            MasaGetir();
+
+            foreach (Masa item in Masalar)
+            {
+                if (item.KatInfo.ToLower() == "Kat1".ToLower())
+                {
+                    MasaGetir(item);
+                }
+            }
         }
 
         private void btnKat2_Click(object sender, EventArgs e)
         {
-            
-            MasaGetir();
+
+            foreach (Masa item in Masalar)
+            {
+                if (item.KatInfo.ToLower() == "Kat2".ToLower())
+                {
+                    MasaGetir(item);
+                }
+            }
         }
 
         private void btnTerasK_Click(object sender, EventArgs e)
         {
-           
-            MasaGetir();
+
+            foreach (Masa item in Masalar)
+            {
+                if (item.KatInfo.ToLower() == "Teras".ToLower())
+                {
+                    MasaGetir(item);
+                }
+            }
         }
 
         private void FrmFloorSelection_Load(object sender, EventArgs e)

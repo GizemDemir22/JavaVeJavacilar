@@ -9,8 +9,8 @@ namespace JavaVeJavacilar.Models
    public class Masa:IAdisyonKapat
     {
         public string KatInfo { get; set; }
-        public int MasaSayisi { get; set; }
-        public int Prefix { get; set; }
+        public string MasaSayisi { get; set; }
+        public string Prefix { get; set; }
         public Boolean Dolumu { get; set; }
         List<Siparis> Siparisler { get; set; }
         decimal IAdisyonKapat.AdisyonKapat()
