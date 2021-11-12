@@ -1,0 +1,48 @@
+{
+    "Corbalar":
+    [
+        {"MercimekCorbasi":5},
+        {"DomatesCorbasi":7},
+        {"BrokoliCorbasi":10}
+    ],
+    "AnaYemekler":
+    [
+        {"Pizza": 18},
+        {"Adana": 20},
+        {"Lahmacun": 13},
+        {"Burger": 15}
+    ],
+    "Salatalar":
+    [
+        {"gavurdağSalatasi": 17},
+        {"rokaSalatasi": 15},
+        {"mevsimSalatasi": 19}
+    ],
+    "SicakIcecekler":
+    [
+        {"Cay": 17},
+        {"TurkKahvesi": 15},
+        {"Mocha": 19},
+        {"Cappicino": 19},
+        {"Macchiato": 14},
+        {"Mocha": 11},
+        {"FiltreKahve": 20}
+    ],
+    "SogukIcecekler":
+    [
+        {"Su": 17},
+        {"Soda": 15},
+        {"Ayran": 19},
+        {"Kola": 14}
+    ],
+    "Tatlilar":
+    [
+        {"Tiramisu": 17},
+        {"Sufle": 15},
+        {"FrambuazliCheesecake": 19},
+        {"Sutlac": 14},
+        {"HavucDilimBaklava": 12},
+        {" Magnolia": 14}
+    ]
+
+}
