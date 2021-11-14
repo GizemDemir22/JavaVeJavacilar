@@ -63,11 +63,5 @@ namespace JavaVeJavacilar.Data
         }
 
         public static List<Masa> Masalar { get; set; } = new List<Masa>();
-        public static List<Urun> Urunler { get; set; } = new List<Urun>();
-        public static List<UrunTuru> UrunTurleri { get; set; } = new List<UrunTuru>();
-
-
-
-
     }
 }

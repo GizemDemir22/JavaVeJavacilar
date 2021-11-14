@@ -10,9 +10,46 @@ namespace JavaVeJavacilar.Data.Managers
 {
     public class UrunManager : IEklenebilirSilinebilir<Urun>
     {
+        public UrunTuru UrunTuruEkle(UrunTuru veri)
+        {
+            Context.DataSet.UrunTurleri.Add(veri);
+            Context.Save();
+
+            return veri;
+        }
+
+        public UrunTuru UrunTuruGuncelle(UrunTuru veri)
+        {
+            UrunTuru u = Context.DataSet.UrunTurleri.Find(u => u.TurAdi == veri.TurAdi);
+            if (u != null)
+            {
+                Context.DataSet.UrunTurleri.Remove(u);
+                Context.DataSet.UrunTurleri.Add(veri);
+            }
+
+            return veri;
+        }
+
+        public void UrunTuruSil(UrunTuru veri)
+        {
+            UrunTuru u = Context.DataSet.UrunTurleri.Find(u => u.TurAdi == veri.TurAdi);
+
+            if(u != null)
+            {
+                var silinecek = Context.DataSet.Urunler.Where(u => u.UrunTuru == veri).ToList();
+
+                foreach(var r in silinecek)
+                {
+                    Context.DataSet.Urunler.Remove(r);
+                }
+
+                Context.DataSet.UrunTurleri.Remove(veri);
+            }
+        }
+
         public Urun Ekle(Urun veri)
         {
-            Context.Urunler.Add(veri);
+            Context.DataSet.Urunler.Add(veri);
             Context.Save();
 
             return veri;
@@ -20,11 +57,11 @@ namespace JavaVeJavacilar.Data.Managers
 
         public Urun Guncelle(Urun veri)
         {
-            Urun u = Context.Urunler.Find(u => u.Id == veri.Id);
+            Urun u = Context.DataSet.Urunler.Find(u => u.Id == veri.Id);
             if(u != null)
             {
-                Context.Urunler.Remove(u);
-                Context.Urunler.Add(veri);                
+                Context.DataSet.Urunler.Remove(u);
+                Context.DataSet.Urunler.Add(veri);                
             }
 
             return veri;
@@ -32,7 +69,7 @@ namespace JavaVeJavacilar.Data.Managers
 
         public void Sil(Urun veri)
         {
-            Context.Urunler.Remove(veri);
+            Context.DataSet.Urunler.Remove(veri);
             Context.Save();
         }
     }

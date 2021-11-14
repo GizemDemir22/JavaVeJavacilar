@@ -25,12 +25,7 @@ namespace JavaVeJavacilar.Data.Managers
             if (g != null)
             {
                 Context.DataSet.Kullanicilar.Remove(g);
-
-                g.KullaniciAdi = veri.KullaniciAdi;
-                g.YoneticiMi = veri.YoneticiMi;
-                g.Parola = veri.Parola;
-
-                Context.DataSet.Kullanicilar.Add(g);
+                Context.DataSet.Kullanicilar.Add(veri as Garson);
                 Context.Save();
             }
 
