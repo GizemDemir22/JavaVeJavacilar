@@ -3,6 +3,7 @@ using JavaVeJavacilar.Data.Concrate;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace JavaVeJavacilar.Data
@@ -13,6 +14,14 @@ namespace JavaVeJavacilar.Data
 
         public static void Load()
         {
+            if (!File.Exists(_path))
+            {
+                if (!Directory.Exists("C:/Menu"))
+                    Directory.CreateDirectory("C:/Menu");
+
+                Save();
+            }
+
             string json = System.IO.File.ReadAllText(_path);
 
             DataSet = JsonConvert.DeserializeObject<DataSet>(json);
@@ -50,7 +59,7 @@ namespace JavaVeJavacilar.Data
             }
         }
 
-        public static DataSet DataSet { get; set; }
+        public static DataSet DataSet { get; set; } = new DataSet();
 
         public static Menu Menu { 
             get 
