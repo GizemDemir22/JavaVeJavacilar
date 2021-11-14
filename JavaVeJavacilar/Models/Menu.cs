@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JavaVeJavacilar.Models
 {
-   public class Menu :Yemek
+   public class Menu : Yemek
     {
         public List<Corbalar> Corbalar { get; set; }
         public List<AnaYemekler> AnaYemekler { get; set; }

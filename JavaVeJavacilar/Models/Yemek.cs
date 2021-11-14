@@ -10,9 +10,5 @@ namespace JavaVeJavacilar.Models
     {
         public string YemekAdi { get; set; }
         public int Fiyat { get; set; }
-         
-
     }
-
-
 }

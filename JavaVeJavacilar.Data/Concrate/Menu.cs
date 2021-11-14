@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JavaVeJavacilar.Models
+namespace JavaVeJavacilar.Data.Concrate
 {
-    public enum Corbalar:byte
+    public class Menu
     {
-        MercimekCorbasi,
-        DomatesCorbasi,
-        BrokoliCorbasi
+        public List<UrunTuru> Urunler { get; set; }
     }
 }

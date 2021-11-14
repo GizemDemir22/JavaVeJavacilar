@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace JavaVeJavacilar.Models
 {
-    public enum Corbalar:byte
-    {
-        MercimekCorbasi,
-        DomatesCorbasi,
-        BrokoliCorbasi
+    public abstract class YiyecekTuru
+    { 
+        public string Isim { get; set; }
+        public List<Yemek> Yemekler { get; set; }
     }
 }

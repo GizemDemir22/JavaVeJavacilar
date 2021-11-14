@@ -11,8 +11,8 @@ namespace JavaVeJavacilar.Models
 {
     public static class Contex
     {
-        public static List<Menu> menuler { get; set; } = new List<Menu>();
-        private static string _path =  //Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Menu/db.json";
+        public static List<YiyecekTuru> menuler { get; set; } = new List<YiyecekTuru>();
+        private static readonly string _path =  //Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Menu/db.json";
             "C:/Menu/db.json";
         public static void Load()
         {
@@ -25,7 +25,7 @@ namespace JavaVeJavacilar.Models
                     string dosyaIcerigi = reader.ReadToEnd();
                     reader.Close();
                     reader.Dispose();
-                    menuler = JsonConvert.DeserializeObject<List<Menu>>(dosyaIcerigi);
+                    menuler = JsonConvert.DeserializeObject<List<YiyecekTuru>>(dosyaIcerigi);
                 }
                 catch (Exception ex)
                 {

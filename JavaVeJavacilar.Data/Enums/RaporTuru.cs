@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JavaVeJavacilar.Models
+namespace JavaVeJavacilar.Data.Enums
 {
-    public enum Corbalar:byte
+    public enum RaporTuru
     {
-        MercimekCorbasi,
-        DomatesCorbasi,
-        BrokoliCorbasi
+        Aylik,
+        Gunluk
     }
 }

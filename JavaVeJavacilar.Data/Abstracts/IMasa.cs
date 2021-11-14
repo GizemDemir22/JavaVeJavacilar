@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JavaVeJavacilar.Models
+namespace JavaVeJavacilar.Data.Abstracts
 {
-    public enum Corbalar:byte
+    public interface IMasa
     {
-        MercimekCorbasi,
-        DomatesCorbasi,
-        BrokoliCorbasi
+
     }
 }

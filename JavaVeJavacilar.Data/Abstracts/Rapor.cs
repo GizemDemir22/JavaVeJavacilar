@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JavaVeJavacilar.Models
+namespace JavaVeJavacilar.Data.Abstracts
 {
-    public enum Corbalar:byte
+    public abstract class Rapor
     {
-        MercimekCorbasi,
-        DomatesCorbasi,
-        BrokoliCorbasi
     }
 }

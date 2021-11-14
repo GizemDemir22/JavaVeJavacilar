@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JavaVeJavacilar.Models
+namespace JavaVeJavacilar.Data.Managers
 {
-    public enum Corbalar:byte
+    public class SiparisManager 
     {
-        MercimekCorbasi,
-        DomatesCorbasi,
-        BrokoliCorbasi
     }
 }

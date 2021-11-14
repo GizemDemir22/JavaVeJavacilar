@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using JavaVeJavacilar.Data.Abstracts;
 
-namespace JavaVeJavacilar.Models
+namespace JavaVeJavacilar.Data.Concrate
 {
-    public enum Corbalar:byte
+    public class AylikRapor : Rapor
     {
-        MercimekCorbasi,
-        DomatesCorbasi,
-        BrokoliCorbasi
     }
 }
