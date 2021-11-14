@@ -76,8 +76,29 @@ namespace JavaVeJavacilar.Forms
   
         private void FrmFloorSelection_Load(object sender, EventArgs e)
         {
+            foreach (var masa in Context.DataSet.Katlar)
+            {
+                Button btn = new Button
+                {
+                    Text = masa.KatBilgisi,
+                    Name = "btn" + masa.KatBilgisi,
+                    Font = new Font("Trebuchet MS", 11.25F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(162))),
+                    Size = new Size(125, 125)
+                };
+                btn.Click += btnKat_Click;
+                pnlKatlar.Controls.Add(btn);
+            }
 
         }
 
+        private void btnKat_Click(object sender, EventArgs e)
+        {
+            seciliButon = sender as Button;
+        }
+
+        private void btnTerasK_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

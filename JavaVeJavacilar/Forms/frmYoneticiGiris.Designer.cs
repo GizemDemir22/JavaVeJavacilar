@@ -33,14 +33,14 @@ namespace JavaVeJavacilar.Forms
             this.txtParola = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtKullaniciAdi = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSifre = new System.Windows.Forms.TextBox();
             this.btnGiris = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(245, 111);
+            this.label1.Location = new System.Drawing.Point(73, 110);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 20);
             this.label1.TabIndex = 0;
@@ -49,7 +49,7 @@ namespace JavaVeJavacilar.Forms
             // txtParola
             // 
             this.txtParola.AutoSize = true;
-            this.txtParola.Location = new System.Drawing.Point(266, 169);
+            this.txtParola.Location = new System.Drawing.Point(115, 145);
             this.txtParola.Name = "txtParola";
             this.txtParola.Size = new System.Drawing.Size(50, 20);
             this.txtParola.TabIndex = 1;
@@ -59,7 +59,7 @@ namespace JavaVeJavacilar.Forms
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(327, 28);
+            this.label3.Location = new System.Drawing.Point(76, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(258, 37);
             this.label3.TabIndex = 2;
@@ -67,23 +67,25 @@ namespace JavaVeJavacilar.Forms
             // 
             // txtKullaniciAdi
             // 
-            this.txtKullaniciAdi.Location = new System.Drawing.Point(360, 107);
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(188, 107);
             this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             this.txtKullaniciAdi.Size = new System.Drawing.Size(146, 27);
             this.txtKullaniciAdi.TabIndex = 3;
+            this.txtKullaniciAdi.Text = "admin";
             // 
-            // textBox2
+            // txtSifre
             // 
-            this.textBox2.Location = new System.Drawing.Point(360, 169);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(146, 27);
-            this.textBox2.TabIndex = 4;
+            this.txtSifre.Location = new System.Drawing.Point(188, 142);
+            this.txtSifre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSifre.Name = "txtSifre";
+            this.txtSifre.Size = new System.Drawing.Size(146, 27);
+            this.txtSifre.TabIndex = 4;
+            this.txtSifre.Text = "admin";
             // 
             // btnGiris
             // 
-            this.btnGiris.Location = new System.Drawing.Point(391, 273);
+            this.btnGiris.Location = new System.Drawing.Point(188, 195);
             this.btnGiris.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnGiris.Name = "btnGiris";
             this.btnGiris.Size = new System.Drawing.Size(86, 31);
@@ -96,15 +98,16 @@ namespace JavaVeJavacilar.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 600);
+            this.ClientSize = new System.Drawing.Size(461, 275);
             this.Controls.Add(this.btnGiris);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtSifre);
             this.Controls.Add(this.txtKullaniciAdi);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtParola);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmYoneticiGiris";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmYoneticiGiris";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -117,7 +120,7 @@ namespace JavaVeJavacilar.Forms
         private System.Windows.Forms.Label txtParola;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtKullaniciAdi;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSifre;
         private System.Windows.Forms.Button btnGiris;
     }
 }

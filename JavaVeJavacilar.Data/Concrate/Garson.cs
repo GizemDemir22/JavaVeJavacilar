@@ -9,5 +9,9 @@ namespace JavaVeJavacilar.Data.Concrate
 {
     public class Garson : Kullanici
     {
+        public override string ToString()
+        {
+            return this.KullaniciAdi;
+        }
     }
 }

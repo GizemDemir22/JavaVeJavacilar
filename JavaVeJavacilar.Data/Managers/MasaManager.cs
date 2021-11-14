@@ -20,7 +20,7 @@ namespace JavaVeJavacilar.Data.Managers
 
         public MasaKati Guncelle(MasaKati veri)
         {
-            MasaKati kat = Context.DataSet.Katlar.Where(k => k.KatBilgisi == veri.KatBilgisi).FirstOrDefault();
+            MasaKati kat = Context.DataSet.Katlar.Where(k => k.Id == veri.Id).FirstOrDefault();
 
             if(kat != null)
             {

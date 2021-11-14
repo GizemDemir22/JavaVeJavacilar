@@ -19,7 +19,16 @@ namespace JavaVeJavacilar.Forms
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
-
+            if(txtKullaniciAdi.Text == "admin" && txtSifre.Text == "admin")
+            {
+                var f = new frmYoneticiYetkileri();
+                f.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Hatalı kullanıcı adı/parola.");
+            }
         }
     }
 }

@@ -16,5 +16,29 @@ namespace JavaVeJavacilar.Forms
         {
             InitializeComponent();
         }
+
+        private void btnKullanicilar_Click(object sender, EventArgs e)
+        {
+            var f = new FrmKullanicilar();
+            f.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var f = new frmUrunTurleri();
+            f.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var f = new frmUrunler();
+            f.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var f = new frmKatlar();
+            f.Show();
+        }
     }
 }

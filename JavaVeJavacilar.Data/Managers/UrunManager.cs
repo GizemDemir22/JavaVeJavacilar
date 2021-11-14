@@ -20,11 +20,12 @@ namespace JavaVeJavacilar.Data.Managers
 
         public UrunTuru UrunTuruGuncelle(UrunTuru veri)
         {
-            UrunTuru u = Context.DataSet.UrunTurleri.Find(u => u.TurAdi == veri.TurAdi);
+            UrunTuru u = Context.DataSet.UrunTurleri.Find(u => u.Id == veri.Id);
             if (u != null)
             {
                 Context.DataSet.UrunTurleri.Remove(u);
                 Context.DataSet.UrunTurleri.Add(veri);
+                Context.Save();
             }
 
             return veri;
@@ -32,7 +33,7 @@ namespace JavaVeJavacilar.Data.Managers
 
         public void UrunTuruSil(UrunTuru veri)
         {
-            UrunTuru u = Context.DataSet.UrunTurleri.Find(u => u.TurAdi == veri.TurAdi);
+            UrunTuru u = Context.DataSet.UrunTurleri.Find(u => u.Id == veri.Id);
 
             if(u != null)
             {
@@ -44,7 +45,16 @@ namespace JavaVeJavacilar.Data.Managers
                 }
 
                 Context.DataSet.UrunTurleri.Remove(veri);
+                Context.Save();
             }
+        }
+
+        public bool UrunTuruKontrolEt(string TurAdi)
+        {
+            if (Context.DataSet.UrunTurleri.Any(v => v.TurAdi == TurAdi))
+                return true;
+
+            return false;
         }
 
         public Urun Ekle(Urun veri)
@@ -61,7 +71,8 @@ namespace JavaVeJavacilar.Data.Managers
             if(u != null)
             {
                 Context.DataSet.Urunler.Remove(u);
-                Context.DataSet.Urunler.Add(veri);                
+                Context.DataSet.Urunler.Add(veri);
+                Context.Save();
             }
 
             return veri;

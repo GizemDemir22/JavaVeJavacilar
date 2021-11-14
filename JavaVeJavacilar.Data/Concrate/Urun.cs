@@ -14,5 +14,10 @@ namespace JavaVeJavacilar.Data.Concrate
         public byte[] Resim { get; set; }
         public string Aciklama { get; set; }
         public UrunTuru UrunTuru { get; set; }
+
+        public override string ToString()
+        {
+            return UrunAdi;
+        }
     }
 }

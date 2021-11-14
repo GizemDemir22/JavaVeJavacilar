@@ -37,5 +37,13 @@ namespace JavaVeJavacilar.Data.Managers
             Context.DataSet.Kullanicilar.Remove(veri as Garson);
             Context.Save();
         }
+
+        public bool KontrolEt(string KullaniciAdi)
+        {
+            if (Context.DataSet.Kullanicilar.Any(s => s.KullaniciAdi == KullaniciAdi))
+                return true;
+
+            return false;
+        }
     }
 }
