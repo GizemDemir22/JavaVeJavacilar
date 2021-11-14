@@ -1,4 +1,7 @@
-﻿using JavaVeJavacilar.Models;
+﻿using JavaVeJavacilar.Data;
+using JavaVeJavacilar.Data.Abstracts;
+using JavaVeJavacilar.Data.Concrate;
+using JavaVeJavacilar.Data.Managers;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -19,32 +22,25 @@ namespace JavaVeJavacilar.Forms
         {
             InitializeComponent();
         }
-        private List<Garson> garsonlar;
 
         private void FrmWaiterLogin_Load(object sender, EventArgs e)
         {
-            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            FileStream fileStream = new FileStream(path + "\\Garson.json", FileMode.Open);
-            StreamReader reader = new StreamReader(fileStream);
-            string dosyaIcerigi = reader.ReadToEnd();
-            garsonlar = JsonConvert.DeserializeObject<List<Garson>>(dosyaIcerigi);
+            
         }
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
-            foreach (var item in garsonlar)
+
+            var manager = new LoginManager();
+
+            if (manager.GirisYap(txtAdSoyad.Text, txtSifre.Text))
             {
-                if (item.AdSoyad == txtAdSoyad.Text && item.Sifre == txtSifre.Text)
-                {
-                    FrmFloorSelection frmfloorSelection = new FrmFloorSelection();
-                    frmfloorSelection.Show();
-                    break;
-                }
-                else
-                {
-                    MessageBox.Show("Kullanıcı adı veya şifre hatalı!", "Hatalı Giriş", MessageBoxButtons.OK, MessageBoxIcon.Question);
-                    break;
-                }
+                FrmFloorSelection frmfloorSelection = new FrmFloorSelection();
+                frmfloorSelection.Show();
+            }
+            else
+            {
+                MessageBox.Show("Kullanıcı adı veya şifre hatalı!", "Hatalı Giriş", MessageBoxButtons.OK, MessageBoxIcon.Question);
             }
 
         }

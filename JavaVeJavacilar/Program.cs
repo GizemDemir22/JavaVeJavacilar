@@ -1,3 +1,4 @@
+using JavaVeJavacilar.Data;
 using JavaVeJavacilar.Forms;
 using System;
 using System.Collections.Generic;
@@ -15,10 +16,13 @@ namespace JavaVeJavacilar
         [STAThread]
         static void Main()
         {
+            Context.Load();
+
+
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmWaiterLogin());
+            Application.Run(new frmYoneticiMiGarsonMi());
         }
     }
 }

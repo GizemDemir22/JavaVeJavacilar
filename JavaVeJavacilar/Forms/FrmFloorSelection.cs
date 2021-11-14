@@ -1,4 +1,5 @@
-﻿using JavaVeJavacilar.Models;
+﻿using JavaVeJavacilar.Data;
+using JavaVeJavacilar.Data.Concrate;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -28,12 +29,12 @@ namespace JavaVeJavacilar.Forms
         {
             flpLayoutPanel.Controls.Clear();
          
-                    for (int i = 1; i <= int.Parse(masa.MasaSayisi); i++)
+                    for (int i = 1; i <= Context.Masalar.Count; i++)
                 {
                     Button btn = new Button
                     {
-                        Text = masa.Prefix + i.ToString(),
-                        Name = "btn" + masa.Prefix+i.ToString(),
+                        Text = masa.MasaAdi,
+                        Name = "btn" + masa.MasaAdi,
                         Font = new Font("Trebuchet MS", 11.25F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(162))),
                         Size = new Size(150, 150)
                     };
@@ -72,61 +73,10 @@ namespace JavaVeJavacilar.Forms
                 item.BackColor = bosRenk;
             }
         }
-        private void btnBahçe_Click(object sender, EventArgs e)
-        {
-            foreach (Masa item in Masalar)
-            {
-                if (item.KatInfo.ToLower()=="Bahçe".ToLower())
-                {
-                    MasaGetir(item);
-                }
-            }
-            
-            
-        }
-        private void btnkat1_Click(object sender, EventArgs e)
-        {
-
-            foreach (Masa item in Masalar)
-            {
-                if (item.KatInfo.ToLower() == "Kat1".ToLower())
-                {
-                    MasaGetir(item);
-                }
-            }
-        }
-
-        private void btnKat2_Click(object sender, EventArgs e)
-        {
-
-            foreach (Masa item in Masalar)
-            {
-                if (item.KatInfo.ToLower() == "Kat2".ToLower())
-                {
-                    MasaGetir(item);
-                }
-            }
-        }
-
-        private void btnTerasK_Click(object sender, EventArgs e)
-        {
-
-            foreach (Masa item in Masalar)
-            {
-                if (item.KatInfo.ToLower() == "Teras".ToLower())
-                {
-                    MasaGetir(item);
-                }
-            }
-        }
-
+  
         private void FrmFloorSelection_Load(object sender, EventArgs e)
         {
-            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            FileStream fileStream = new FileStream(path + "\\KatInfo.json", FileMode.Open);
-            StreamReader reader = new StreamReader(fileStream);
-            string dosyaIcerigi = reader.ReadToEnd();
-            Masalar = JsonConvert.DeserializeObject<List<Masa>>(dosyaIcerigi);
+
         }
 
     }

@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace JavaVeJavacilar.Data.Managers
 {
-    public class LoginManager<T> where T : Kullanici
+    public class LoginManager
     {
-        public bool GirisYap(Kullanici kullanici)
+        public bool GirisYap(string kullanici, string parola)
         {
 
             //foreach(Kullanici k in Context.Kullanicilar)
@@ -19,8 +19,8 @@ namespace JavaVeJavacilar.Data.Managers
             //}
 
             if (Context.DataSet.Kullanicilar
-                .Any(s => s.KullaniciAdi == kullanici.KullaniciAdi &&
-                s.Parola == kullanici.Parola))
+                .Any(s => s.KullaniciAdi == kullanici &&
+                s.Parola == parola))
             {
                 return true;
             }

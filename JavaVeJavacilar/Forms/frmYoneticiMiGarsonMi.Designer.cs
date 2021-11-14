@@ -38,38 +38,43 @@ namespace JavaVeJavacilar.Forms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(248, 57);
+            this.label1.Location = new System.Drawing.Point(283, 76);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(296, 32);
+            this.label1.Size = new System.Drawing.Size(366, 41);
             this.label1.TabIndex = 0;
             this.label1.Text = "Yönetici Misin Garson mu?";
             // 
             // btnYonetici
             // 
-            this.btnYonetici.Location = new System.Drawing.Point(248, 165);
+            this.btnYonetici.Location = new System.Drawing.Point(283, 220);
+            this.btnYonetici.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnYonetici.Name = "btnYonetici";
-            this.btnYonetici.Size = new System.Drawing.Size(119, 53);
+            this.btnYonetici.Size = new System.Drawing.Size(136, 71);
             this.btnYonetici.TabIndex = 1;
             this.btnYonetici.Text = "Yönetici";
             this.btnYonetici.UseVisualStyleBackColor = true;
+            this.btnYonetici.Click += new System.EventHandler(this.btnYonetici_Click);
             // 
             // btnGarson
             // 
-            this.btnGarson.Location = new System.Drawing.Point(418, 165);
+            this.btnGarson.Location = new System.Drawing.Point(478, 220);
+            this.btnGarson.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnGarson.Name = "btnGarson";
-            this.btnGarson.Size = new System.Drawing.Size(126, 53);
+            this.btnGarson.Size = new System.Drawing.Size(144, 71);
             this.btnGarson.TabIndex = 2;
             this.btnGarson.Text = "Garson";
             this.btnGarson.UseVisualStyleBackColor = true;
+            this.btnGarson.Click += new System.EventHandler(this.btnGarson_Click);
             // 
             // frmYoneticiMiGarsonMi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(914, 600);
             this.Controls.Add(this.btnGarson);
             this.Controls.Add(this.btnYonetici);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmYoneticiMiGarsonMi";
             this.Text = "frmYoneticiMiGarsonMi";
             this.ResumeLayout(false);

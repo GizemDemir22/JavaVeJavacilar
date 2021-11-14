@@ -1,5 +1,4 @@
-﻿using JavaVeJavacilar.Models;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,7 +22,6 @@ namespace JavaVeJavacilar.Forms
         private void btnCorba_Click(object sender, EventArgs e)
         {
             flowLayoutMenu.Controls.Clear();
-            flowLayoutMenu.Tag= Enum.GetNames(typeof(Corbalar));
             //for (int i = 1; i <= int.Parse(Tag.ToString()); i++)
             //{
             //    Button btn = new Button

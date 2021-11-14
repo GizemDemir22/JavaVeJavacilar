@@ -36,46 +36,7 @@ namespace JavaVeJavacilar.Forms
             this.btnTerasK = new System.Windows.Forms.Button();
             this.flpLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
-            // 
-            // btnBahçe
-            // 
-            this.btnBahçe.Location = new System.Drawing.Point(32, 21);
-            this.btnBahçe.Name = "btnBahçe";
-            this.btnBahçe.Size = new System.Drawing.Size(133, 105);
-            this.btnBahçe.TabIndex = 0;
-            this.btnBahçe.Text = "Bahçe Katı";
-            this.btnBahçe.UseVisualStyleBackColor = true;
-            this.btnBahçe.Click += new System.EventHandler(this.btnBahçe_Click);
-            // 
-            // btnkat1
-            // 
-            this.btnkat1.Location = new System.Drawing.Point(233, 21);
-            this.btnkat1.Name = "btnkat1";
-            this.btnkat1.Size = new System.Drawing.Size(133, 105);
-            this.btnkat1.TabIndex = 1;
-            this.btnkat1.Text = "1. Kat";
-            this.btnkat1.UseVisualStyleBackColor = true;
-            this.btnkat1.Click += new System.EventHandler(this.btnkat1_Click);
-            // 
-            // btnKat2
-            // 
-            this.btnKat2.Location = new System.Drawing.Point(440, 21);
-            this.btnKat2.Name = "btnKat2";
-            this.btnKat2.Size = new System.Drawing.Size(133, 105);
-            this.btnKat2.TabIndex = 2;
-            this.btnKat2.Text = "2.Kat";
-            this.btnKat2.UseVisualStyleBackColor = true;
-            this.btnKat2.Click += new System.EventHandler(this.btnKat2_Click);
-            // 
-            // btnTerasK
-            // 
-            this.btnTerasK.Location = new System.Drawing.Point(630, 21);
-            this.btnTerasK.Name = "btnTerasK";
-            this.btnTerasK.Size = new System.Drawing.Size(133, 105);
-            this.btnTerasK.TabIndex = 3;
-            this.btnTerasK.Text = "Teras Katı";
-            this.btnTerasK.UseVisualStyleBackColor = true;
-            this.btnTerasK.Click += new System.EventHandler(this.btnTerasK_Click);
+
             // 
             // flpLayoutPanel
             // 

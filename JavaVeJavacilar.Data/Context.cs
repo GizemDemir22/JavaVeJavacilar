@@ -50,7 +50,7 @@ namespace JavaVeJavacilar.Data
             }
         }
 
-        public static DataSet DataSet { get; set; } = new DataSet();
+        public static DataSet DataSet { get; set; }
 
         public static Menu Menu { 
             get 

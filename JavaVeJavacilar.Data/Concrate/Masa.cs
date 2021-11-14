@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace JavaVeJavacilar.Data.Concrate
 {
-    public class Masa: IMasa
+    public class Masa
     {
         public bool DoluMu { get; set; }
         public MasaKati KatBilgisi { get; set; }

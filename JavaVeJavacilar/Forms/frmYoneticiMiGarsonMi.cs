@@ -16,5 +16,23 @@ namespace JavaVeJavacilar.Forms
         {
             InitializeComponent();
         }
+
+        private void btnYonetici_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Form f = new frmYoneticiGiris();
+
+            f.Show();
+        }
+
+        private void btnGarson_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Form f = new FrmWaiterLogin();
+
+            f.Show();
+        }
     }
 }
