@@ -25,30 +25,27 @@ namespace JavaVeJavacilar.Forms
         public List<Masa> Masalar;
         private Button seciliButon;
 
-        public void MasaGetir(Masa masa)
+        public void MasaGetir(MasaKati katBilgisi)
         {
             flpLayoutPanel.Controls.Clear();
-         
-                    for (int i = 1; i <= Context.Masalar.Count; i++)
+            var masalar = Context.Masalar.Where(m => m.KatBilgisi == katBilgisi).ToList();
+
+            foreach (var masa in masalar)
+            {
+                Button btn = new Button
                 {
-                    Button btn = new Button
-                    {
-                        Text = masa.MasaAdi,
-                        Name = "btn" + masa.MasaAdi,
-                        Font = new Font("Trebuchet MS", 11.25F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(162))),
-                        Size = new Size(150, 150)
-                    };
+                    Text = masa.MasaAdi,
+                    Name = "btn" + masa.MasaAdi,
+                    Font = new Font("Trebuchet MS", 11.25F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(162))),
+                    Size = new Size(150, 150)
+                };
                 btn.Click += btnMasa_Click;
                 flpLayoutPanel.Controls.Add(btn);
-                }
-
-
-           
+            }  
         }
 
         private void btnMasa_Click(object sender, EventArgs e)
         {
-
             seciliButon = sender as Button;
             Renklendir(seciliButon);
             FrmMenu frmmenu = new FrmMenu();
@@ -76,17 +73,23 @@ namespace JavaVeJavacilar.Forms
   
         private void FrmFloorSelection_Load(object sender, EventArgs e)
         {
-            foreach (var masa in Context.DataSet.Katlar)
+            foreach (var katbilgisi in Context.DataSet.Katlar)
             {
                 Button btn = new Button
                 {
-                    Text = masa.KatBilgisi,
-                    Name = "btn" + masa.KatBilgisi,
+                    Text = katbilgisi.KatBilgisi,
+                    Name = "btn" + katbilgisi.KatBilgisi,
                     Font = new Font("Trebuchet MS", 11.25F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(162))),
                     Size = new Size(125, 125)
                 };
                 btn.Click += btnKat_Click;
                 pnlKatlar.Controls.Add(btn);
+
+                btn.Click += (sender, args) =>
+                {
+                    MasaGetir(katbilgisi);
+                };
+
             }
 
         }
