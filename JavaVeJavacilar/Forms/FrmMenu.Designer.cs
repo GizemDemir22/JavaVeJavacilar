@@ -29,125 +29,116 @@ namespace JavaVeJavacilar.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutMenu = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnCorba = new System.Windows.Forms.Button();
-            this.btnSalatalar = new System.Windows.Forms.Button();
-            this.btnAnaYemekler = new System.Windows.Forms.Button();
-            this.btnBaslangıclar = new System.Windows.Forms.Button();
-            this.btnTatlılar = new System.Windows.Forms.Button();
-            this.btnSıcakİcecekler = new System.Windows.Forms.Button();
-            this.btnSogukİcecekler = new System.Windows.Forms.Button();
+            this.btnAdisyon = new System.Windows.Forms.Button();
+            this.btnKaydet = new System.Windows.Forms.Button();
+            this.listUrunler = new System.Windows.Forms.ListView();
+            this.listHesap = new System.Windows.Forms.ListBox();
+            this.lstOzet = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // flowLayoutMenu
+            // btnAdisyon
             // 
-            this.flowLayoutMenu.Location = new System.Drawing.Point(15, 110);
-            this.flowLayoutMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.flowLayoutMenu.Name = "flowLayoutMenu";
-            this.flowLayoutMenu.Size = new System.Drawing.Size(982, 438);
-            this.flowLayoutMenu.TabIndex = 7;
-            this.flowLayoutMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutMenu_Paint);
+            this.btnAdisyon.Enabled = false;
+            this.btnAdisyon.Location = new System.Drawing.Point(836, 364);
+            this.btnAdisyon.Name = "btnAdisyon";
+            this.btnAdisyon.Size = new System.Drawing.Size(94, 48);
+            this.btnAdisyon.TabIndex = 8;
+            this.btnAdisyon.Text = "Hesap Kapat";
+            this.btnAdisyon.UseVisualStyleBackColor = true;
+            this.btnAdisyon.Click += new System.EventHandler(this.btnAdisyon_Click);
             // 
-            // btnCorba
+            // btnKaydet
             // 
-            this.btnCorba.Location = new System.Drawing.Point(15, 46);
-            this.btnCorba.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCorba.Name = "btnCorba";
-            this.btnCorba.Size = new System.Drawing.Size(118, 36);
-            this.btnCorba.TabIndex = 0;
-            this.btnCorba.Text = "Çorbalar";
-            this.btnCorba.UseVisualStyleBackColor = true;
-            this.btnCorba.Click += new System.EventHandler(this.btnCorba_Click);
+            this.btnKaydet.Location = new System.Drawing.Point(637, 364);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.Size = new System.Drawing.Size(94, 48);
+            this.btnKaydet.TabIndex = 10;
+            this.btnKaydet.Text = "Kaydet";
+            this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
-            // btnSalatalar
+            // listUrunler
             // 
-            this.btnSalatalar.Location = new System.Drawing.Point(170, 46);
-            this.btnSalatalar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSalatalar.Name = "btnSalatalar";
-            this.btnSalatalar.Size = new System.Drawing.Size(118, 36);
-            this.btnSalatalar.TabIndex = 1;
-            this.btnSalatalar.Text = "Salatalar";
-            this.btnSalatalar.UseVisualStyleBackColor = true;
+            this.listUrunler.HideSelection = false;
+            this.listUrunler.Location = new System.Drawing.Point(12, 12);
+            this.listUrunler.Name = "listUrunler";
+            this.listUrunler.Size = new System.Drawing.Size(501, 400);
+            this.listUrunler.TabIndex = 11;
+            this.listUrunler.UseCompatibleStateImageBehavior = false;
+            this.listUrunler.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listUrunler_MouseDoubleClick);
             // 
-            // btnAnaYemekler
+            // listHesap
             // 
-            this.btnAnaYemekler.Location = new System.Drawing.Point(461, 46);
-            this.btnAnaYemekler.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAnaYemekler.Name = "btnAnaYemekler";
-            this.btnAnaYemekler.Size = new System.Drawing.Size(118, 36);
-            this.btnAnaYemekler.TabIndex = 2;
-            this.btnAnaYemekler.Text = "Ana Yemekler";
-            this.btnAnaYemekler.UseVisualStyleBackColor = true;
+            this.listHesap.FormattingEnabled = true;
+            this.listHesap.ItemHeight = 20;
+            this.listHesap.Location = new System.Drawing.Point(531, 32);
+            this.listHesap.Name = "listHesap";
+            this.listHesap.Size = new System.Drawing.Size(200, 324);
+            this.listHesap.TabIndex = 12;
+            this.listHesap.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listHesap_MouseDoubleClick);
             // 
-            // btnBaslangıclar
+            // lstOzet
             // 
-            this.btnBaslangıclar.Location = new System.Drawing.Point(314, 46);
-            this.btnBaslangıclar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBaslangıclar.Name = "btnBaslangıclar";
-            this.btnBaslangıclar.Size = new System.Drawing.Size(118, 36);
-            this.btnBaslangıclar.TabIndex = 3;
-            this.btnBaslangıclar.Text = "Başlangıçlar";
-            this.btnBaslangıclar.UseVisualStyleBackColor = true;
+            this.lstOzet.FormattingEnabled = true;
+            this.lstOzet.ItemHeight = 20;
+            this.lstOzet.Location = new System.Drawing.Point(737, 32);
+            this.lstOzet.Name = "lstOzet";
+            this.lstOzet.Size = new System.Drawing.Size(193, 324);
+            this.lstOzet.TabIndex = 13;
+            this.lstOzet.SelectedIndexChanged += new System.EventHandler(this.lstOzet_SelectedIndexChanged);
             // 
-            // btnTatlılar
+            // label1
             // 
-            this.btnTatlılar.Location = new System.Drawing.Point(601, 46);
-            this.btnTatlılar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnTatlılar.Name = "btnTatlılar";
-            this.btnTatlılar.Size = new System.Drawing.Size(118, 36);
-            this.btnTatlılar.TabIndex = 4;
-            this.btnTatlılar.Text = "Tatlılar";
-            this.btnTatlılar.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(737, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 20);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Masa Özeti:";
             // 
-            // btnSıcakİcecekler
+            // label2
             // 
-            this.btnSıcakİcecekler.Location = new System.Drawing.Point(744, 46);
-            this.btnSıcakİcecekler.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSıcakİcecekler.Name = "btnSıcakİcecekler";
-            this.btnSıcakİcecekler.Size = new System.Drawing.Size(118, 36);
-            this.btnSıcakİcecekler.TabIndex = 5;
-            this.btnSıcakİcecekler.Text = "Sıcakİçecekler";
-            this.btnSıcakİcecekler.UseVisualStyleBackColor = true;
-            // 
-            // btnSogukİcecekler
-            // 
-            this.btnSogukİcecekler.Location = new System.Drawing.Point(880, 46);
-            this.btnSogukİcecekler.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSogukİcecekler.Name = "btnSogukİcecekler";
-            this.btnSogukİcecekler.Size = new System.Drawing.Size(118, 36);
-            this.btnSogukİcecekler.TabIndex = 6;
-            this.btnSogukİcecekler.Text = "Soğuk İçecekler";
-            this.btnSogukİcecekler.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(531, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 20);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Yeni Sipariş:";
             // 
             // FrmMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1072, 562);
-            this.Controls.Add(this.flowLayoutMenu);
-            this.Controls.Add(this.btnSogukİcecekler);
-            this.Controls.Add(this.btnSıcakİcecekler);
-            this.Controls.Add(this.btnTatlılar);
-            this.Controls.Add(this.btnBaslangıclar);
-            this.Controls.Add(this.btnAnaYemekler);
-            this.Controls.Add(this.btnSalatalar);
-            this.Controls.Add(this.btnCorba);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ClientSize = new System.Drawing.Size(942, 442);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lstOzet);
+            this.Controls.Add(this.listHesap);
+            this.Controls.Add(this.listUrunler);
+            this.Controls.Add(this.btnKaydet);
+            this.Controls.Add(this.btnAdisyon);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmMenu";
-            this.Text = "FrmMenu";
-            this.flowLayoutMenu.ResumeLayout(false);
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Menü";
+            this.Load += new System.EventHandler(this.FrmMenu_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutMenu;
-        private System.Windows.Forms.Button btnCorba;
-        private System.Windows.Forms.Button btnSalatalar;
-        private System.Windows.Forms.Button btnAnaYemekler;
-        private System.Windows.Forms.Button btnBaslangıclar;
-        private System.Windows.Forms.Button btnTatlılar;
-        private System.Windows.Forms.Button btnSıcakİcecekler;
-        private System.Windows.Forms.Button btnSogukİcecekler;
+        private System.Windows.Forms.Button btnAdisyon;
+        private System.Windows.Forms.Button btnKaydet;
+        private System.Windows.Forms.ListView listUrunler;
+        private System.Windows.Forms.ListBox listHesap;
+        private System.Windows.Forms.ListBox lstOzet;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -18,7 +18,6 @@ namespace JavaVeJavacilar
         {
             Context.Load();
 
-
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

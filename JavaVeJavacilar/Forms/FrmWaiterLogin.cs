@@ -37,6 +37,7 @@ namespace JavaVeJavacilar.Forms
             {
                 FrmFloorSelection frmfloorSelection = new FrmFloorSelection();
                 frmfloorSelection.Show();
+                this.Hide();
             }
             else
             {

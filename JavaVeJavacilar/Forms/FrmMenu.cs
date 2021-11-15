@@ -1,5 +1,6 @@
 ﻿using JavaVeJavacilar.Data;
 using JavaVeJavacilar.Data.Concrate;
+using JavaVeJavacilar.Data.Managers;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -16,90 +17,149 @@ namespace JavaVeJavacilar.Forms
 {
     public partial class FrmMenu : Form
     {
+        private readonly SiparisManager _siparisManager = new();
+
+        private Siparis Siparis = new();
+
+        public Masa masa;
+
         public FrmMenu()
         {
             InitializeComponent();
         }
-        private List<Urun> urunler;
-        private Button seciliButon;
-        private void btnCorba_Click(object sender, EventArgs e)
+
+        private void FrmMenu_Load(object sender, EventArgs e)
         {
-            flowLayoutMenu.Controls.Clear();
+            ImageList list = new ImageList();
+            list.ImageSize = new Size(96, 96);
 
-            var urunler = Context.DataSet.Urunler.Where(m => m.UrunTuru.TurAdi=="Çorbalar").ToList();
-           
-            foreach (var urun in urunler)
-                    {
-
-                Button btn = new Button
-                {
-                    Text = urun.UrunAdi,
-                    Name = "btn" + urun.Id,
-                    Font = new Font("Trebuchet MS", 11.25F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(162))),
-                    Size = new Size(150, 150),
-                    BackgroundImage = Image.FromStream(new MemoryStream(urun.Resim))
-                             //BackgroundImage = urun.Resim
-                        };
-                        btn.MouseHover += btnUrunHover;
-                    
-                        flowLayoutMenu.Controls.Add(btn);
-
-                        }
-                       
-                        //btn.Click += btnMasa_Click;
-                        //flpLayoutPanel.Controls.Add(btn);
-                    }
-
-        private void btnUrunHover(object sender, EventArgs e)
-        {
-            seciliButon = sender as Button;
-            var urunler = Context.DataSet.Urunler.Where(m => m.UrunTuru.TurAdi == "Çorbalar").ToList();
-            foreach (var item in urunler)
+            foreach (var tur in Context.DataSet.UrunTurleri)
             {
-                seciliButon.Text = item.Fiyat.ToString();
+
+                var group = new ListViewGroup()
+                {
+                    Header = tur.TurAdi,
+                    Name = tur.TurAdi
+                };
+
+                listUrunler.Groups.Add(group);
+
+                foreach( var urun in tur.Urunler)
+                {
+                    list.Images.Add(urun.Id.ToString(), Image.FromStream(new MemoryStream(urun.Resim)));
+
+                    listUrunler.LargeImageList = list;
+
+                    var item = new ListViewItem()
+                    {
+                        Text = urun.UrunAdi + " - " + urun.Fiyat,
+                        Name = urun.UrunAdi,
+                        ImageKey = urun.Id.ToString(),
+                        Group = group,
+                        Tag = urun
+                    };
+
+                    listUrunler.Items.Add(item);
+                }
+            }
+
+            if(masa.Siparisler.Count > 0)
+            {
+                foreach(var siparis in masa.Siparisler)
+                {
+                    foreach(var urun in siparis.Urunler)
+                    {
+                        lstOzet.Items.Add(urun.Adet + "x " + urun.Urun.UrunAdi + " - " + (urun.Urun.Fiyat * urun.Adet) + "₺");
+                    }
+                }
+
+                btnAdisyon.Enabled = true;
             }
         }
 
+        private void listUrunler_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if(listUrunler.SelectedItems.Count == 1)
+            {
+                var selectedItem = listUrunler.SelectedItems[0].Tag as Urun;
 
+                listHesap.Items.Add(selectedItem);
+            }
+        }
 
+        private void listHesap_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if(listHesap.SelectedItems.Count == 1)
+            {
+                listHesap.Items.Remove(listHesap.SelectedItem);
+            }
+        }
 
+        private void btnKaydet_Click(object sender, EventArgs e)
+        {
+            var seciliUrunler = new List<Urun>();
 
-        //for (int i = 1; i <= int.Parse(Tag.ToString()); i++)
-        //{
-        //    Button btn = new Button
-        //    {
-        //        Text = masa.Prefix + i.ToString(),
-        //        Name = "btn" + masa.Prefix + i.ToString(),
-        //        Font = new Font("Trebuchet MS", 11.25F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(162))),
-        //        Size = new Size(150, 150)
-        //    };
-        //    btn.Click += btnMasa_Click;
-        //    flpLayoutPanel.Controls.Add(btn);
-        //}
+            foreach(var urun in listHesap.Items)
+            {
+                seciliUrunler.Add((Urun)urun);
+            }
+
+            if (seciliUrunler.Count <= 0)
+            {
+                MessageBox.Show("Eklenecek ürün bulunamadı.");
+                return;
+            }
+
+            var siparisItems = new List<SiparisSatir>();
+
+            foreach(var urun in seciliUrunler)
+            {
+                if(siparisItems.Any(s => s.Urun == urun))
+                {
+                    int index = siparisItems.FindIndex(u => u.Urun == urun);
+                    siparisItems[index].Adet = siparisItems[index].Adet + 1;
+                }
+                else
+                {
+                    siparisItems.Add(new SiparisSatir()
+                    {
+                        Adet = 1,
+                        Urun = urun
+                    });
+                }
+            }
+
+            var siparis = new Siparis()
+            {
+                Urunler = siparisItems
+            };
+
+            _siparisManager.Ekle(siparis, masa);
+
+            this.DialogResult = DialogResult.OK;
+        }
+
+        private void btnAdisyon_Click(object sender, EventArgs e)
+        {
+           
+            var f = new frmAdisyon();
+
+            f.Masa = masa;
+
+            if (f.ShowDialog(this) == DialogResult.OK)
+            {
+                masa.DoluMu = false;
+                masa.Siparisler = new List<Siparis>();
+                this.DialogResult = DialogResult.OK;
+            }
+        }
+
+        private void lstOzet_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
-            //public void flowLayoutMenu_Paint(object sender, PaintEventArgs e)
-            //{
-
-            //}
-
-            //private void FrmMenu_Load(object sender, EventArgs e)
-            //{
-            //    //string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            //    //FileStream fileStream = new FileStream("C:\\Users\\Admin\\Source\\Repos\\JavaVeJavacilar\\JavaVeJavacilar\\Resources\\", FileMode.Open);
-            //    //StreamReader reader = new StreamReader(fileStream);
-            //    //string dosyaIcerigi = reader.ReadToEnd();
-            //    //Menuler = JsonConvert.DeserializeObject<List<Menu>>(dosyaIcerigi);
-            //    //foreach (var item in Menuler)
-            //    //{
-            //    //    this.Text = item.Tatlilar;
-            //    //}
-            //}
-
-            //private void btnAnaYemekler_Click(object sender, EventArgs e)
-            //{
-
-            //}
-        }
+}
  
 

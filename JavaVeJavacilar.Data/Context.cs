@@ -5,12 +5,13 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 
 namespace JavaVeJavacilar.Data
 {
     public class Context
     {
-        private static readonly string _path = "C:/Menu/db.json";
+        private static readonly string _path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "/AppData/db.json";
 
         public static void Load()
         {

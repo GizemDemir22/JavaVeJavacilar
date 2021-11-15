@@ -8,7 +8,7 @@ namespace JavaVeJavacilar.Data.Concrate
 {
     public class Urun
     {
-        public Guid Id { get; set; }
+        public Guid Id { get; set; } = Guid.NewGuid();
         public string UrunAdi { get; set; }
         public decimal Fiyat { get; set; }
         public byte[] Resim { get; set; }
