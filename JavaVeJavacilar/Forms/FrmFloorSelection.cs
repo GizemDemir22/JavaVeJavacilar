@@ -82,7 +82,7 @@ namespace JavaVeJavacilar.Forms
                     Font = new Font("Trebuchet MS", 11.25F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(162))),
                     Size = new Size(125, 125)
                 };
-                btn.Click += btnKat_Click;
+
                 pnlKatlar.Controls.Add(btn);
 
                 btn.Click += (sender, args) =>
@@ -94,12 +94,7 @@ namespace JavaVeJavacilar.Forms
 
         }
 
-        private void btnKat_Click(object sender, EventArgs e)
-        {
-            seciliButon = sender as Button;
-        }
-
-        private void btnTerasK_Click(object sender, EventArgs e)
+        private void flpLayoutPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }

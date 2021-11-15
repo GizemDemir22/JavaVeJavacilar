@@ -97,5 +97,10 @@ namespace JavaVeJavacilar.Forms
             lstUrunTurleri.DataSource = null;
             lstUrunTurleri.DataSource = Context.DataSet.UrunTurleri;
         }
+
+        private void txtTurAdi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

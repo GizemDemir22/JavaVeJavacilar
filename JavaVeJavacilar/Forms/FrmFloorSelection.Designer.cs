@@ -42,6 +42,7 @@ namespace JavaVeJavacilar.Forms
             this.flpLayoutPanel.Padding = new System.Windows.Forms.Padding(5);
             this.flpLayoutPanel.Size = new System.Drawing.Size(802, 447);
             this.flpLayoutPanel.TabIndex = 4;
+            this.flpLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.flpLayoutPanel_Paint);
             // 
             // pnlKatlar
             // 

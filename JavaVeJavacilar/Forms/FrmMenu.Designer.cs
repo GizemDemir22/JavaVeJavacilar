@@ -37,6 +37,8 @@ namespace JavaVeJavacilar.Forms
             this.btnSıcakİcecekler = new System.Windows.Forms.Button();
             this.btnSogukİcecekler = new System.Windows.Forms.Button();
             this.flowLayoutMenu = new System.Windows.Forms.FlowLayoutPanel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.flowLayoutMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCorba
@@ -105,11 +107,19 @@ namespace JavaVeJavacilar.Forms
             // 
             // flowLayoutMenu
             // 
+            this.flowLayoutMenu.Controls.Add(this.comboBox1);
             this.flowLayoutMenu.Location = new System.Drawing.Point(12, 88);
             this.flowLayoutMenu.Name = "flowLayoutMenu";
             this.flowLayoutMenu.Size = new System.Drawing.Size(786, 350);
             this.flowLayoutMenu.TabIndex = 7;
-            this.flowLayoutMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutMenu_Paint);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(3, 3);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(151, 28);
+            this.comboBox1.TabIndex = 8;
             // 
             // FrmMenu
             // 
@@ -126,14 +136,12 @@ namespace JavaVeJavacilar.Forms
             this.Controls.Add(this.btnCorba);
             this.Name = "FrmMenu";
             this.Text = "FrmMenu";
-            this.Load += new System.EventHandler(this.FrmMenu_Load);
+            this.flowLayoutMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnCorba;
         private System.Windows.Forms.Button btnSalatalar;
         private System.Windows.Forms.Button btnAnaYemekler;
         private System.Windows.Forms.Button btnBaslangıclar;
@@ -141,5 +149,7 @@ namespace JavaVeJavacilar.Forms
         private System.Windows.Forms.Button btnSıcakİcecekler;
         private System.Windows.Forms.Button btnSogukİcecekler;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutMenu;
+        public System.Windows.Forms.Button btnCorba;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
