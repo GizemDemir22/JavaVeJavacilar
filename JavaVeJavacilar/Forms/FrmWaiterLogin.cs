@@ -22,12 +22,6 @@ namespace JavaVeJavacilar.Forms
         {
             InitializeComponent();
         }
-
-        private void FrmWaiterLogin_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnGiris_Click(object sender, EventArgs e)
         {
 
@@ -44,8 +38,6 @@ namespace JavaVeJavacilar.Forms
             }
 
         }
-
-        
     }
 }
 

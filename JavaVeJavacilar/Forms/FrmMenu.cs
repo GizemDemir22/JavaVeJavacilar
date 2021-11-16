@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using JavaVeJavacilar.Data;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,7 +22,7 @@ namespace JavaVeJavacilar.Forms
        
         private void btnCorba_Click(object sender, EventArgs e)
         {
-            flowLayoutMenu.Controls.Clear();
+         
             //for (int i = 1; i <= int.Parse(Tag.ToString()); i++)
             //{
             //    Button btn = new Button
@@ -43,15 +44,8 @@ namespace JavaVeJavacilar.Forms
 
         private void FrmMenu_Load(object sender, EventArgs e)
         {
-            //string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            //FileStream fileStream = new FileStream("C:\\Users\\Admin\\Source\\Repos\\JavaVeJavacilar\\JavaVeJavacilar\\Resources\\", FileMode.Open);
-            //StreamReader reader = new StreamReader(fileStream);
-            //string dosyaIcerigi = reader.ReadToEnd();
-            //Menuler = JsonConvert.DeserializeObject<List<Menu>>(dosyaIcerigi);
-            //foreach (var item in Menuler)
-            //{
-            //    this.Text = item.Tatlilar;
-            //}
+           
         }
+
     }
 }
