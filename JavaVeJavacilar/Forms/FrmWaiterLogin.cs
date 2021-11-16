@@ -27,10 +27,11 @@ namespace JavaVeJavacilar.Forms
 
             var manager = new LoginManager();
 
-            if (manager.GirisYap(txtAdSoyad.Text, txtSifre.Text))
+            if (manager.GirisYap(txtKullaniciAdi.Text, txtSifre.Text))
             {
                 FrmFloorSelection frmfloorSelection = new FrmFloorSelection();
                 frmfloorSelection.Show();
+                this.Hide();
             }
             else
             {

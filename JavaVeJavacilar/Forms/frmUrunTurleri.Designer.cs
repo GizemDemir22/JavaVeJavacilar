@@ -82,6 +82,7 @@ namespace JavaVeJavacilar.Forms
             this.txtTurAdi.Name = "txtTurAdi";
             this.txtTurAdi.Size = new System.Drawing.Size(278, 34);
             this.txtTurAdi.TabIndex = 3;
+            this.txtTurAdi.TextChanged += new System.EventHandler(this.txtTurAdi_TextChanged);
             // 
             // label1
             // 

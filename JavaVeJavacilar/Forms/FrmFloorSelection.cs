@@ -22,7 +22,6 @@ namespace JavaVeJavacilar.Forms
             InitializeComponent();
         }
 
-        public List<Masa> Masalar;
         private Button seciliButon;
 
         public void MasaGetir(MasaKati katBilgisi)
@@ -37,19 +36,36 @@ namespace JavaVeJavacilar.Forms
                     Text = masa.MasaAdi,
                     Name = "btn" + masa.MasaAdi,
                     Font = new Font("Trebuchet MS", 11.25F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(162))),
-                    Size = new Size(150, 150)
+                    Size = new Size(150, 150),
                 };
-                btn.Click += btnMasa_Click;
-                flpLayoutPanel.Controls.Add(btn);
-            }  
-        }
 
-        private void btnMasa_Click(object sender, EventArgs e)
-        {
-            seciliButon = sender as Button;
-            Renklendir(seciliButon);
-            FrmMenu frmmenu = new FrmMenu();
-            frmmenu.Show();
+                if (masa.Siparisler != null && masa.Siparisler.Count > 0)
+                {
+                    masa.DoluMu = true;
+                    btn.BackColor = doluRenk;
+                }
+                else
+                {
+                    btn.BackColor = bosRenk;
+                }
+
+                btn.Click += (sender, e) =>
+                {
+                    seciliButon = sender as Button;
+                    //Renklendir(seciliButon);
+
+                    FrmMenu frmmenu = new FrmMenu();
+                    frmmenu.masa = masa;
+                    
+                    if(frmmenu.ShowDialog(this) == DialogResult.OK)
+                    {
+                        if (SeciliKategori != null)
+                            SeciliKategori.PerformClick();
+                    }
+                };
+
+                flpLayoutPanel.Controls.Add(btn);
+            }
         }
 
         private Color bosRenk = Color.MediumSpringGreen;
@@ -60,7 +76,7 @@ namespace JavaVeJavacilar.Forms
             foreach (Button item in flpLayoutPanel.Controls)
             {
                 if (item.Enabled)
-                    item.BackColor = item == seciliButon ? seciliRenk : bosRenk;
+                    item.BackColor = item == seciliButon ? seciliRenk : item.BackColor;
             }
         }
         private void Renklendir()
@@ -70,7 +86,8 @@ namespace JavaVeJavacilar.Forms
                 item.BackColor = bosRenk;
             }
         }
-  
+
+        private Button SeciliKategori;
         private void FrmFloorSelection_Load(object sender, EventArgs e)
         {
             foreach (var katbilgisi in Context.DataSet.Katlar)
@@ -82,11 +99,12 @@ namespace JavaVeJavacilar.Forms
                     Font = new Font("Trebuchet MS", 11.25F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(162))),
                     Size = new Size(125, 125)
                 };
-                btn.Click += btnKat_Click;
+
                 pnlKatlar.Controls.Add(btn);
 
                 btn.Click += (sender, args) =>
                 {
+                    SeciliKategori = btn;
                     MasaGetir(katbilgisi);
                 };
 
@@ -94,12 +112,7 @@ namespace JavaVeJavacilar.Forms
 
         }
 
-        private void btnKat_Click(object sender, EventArgs e)
-        {
-            seciliButon = sender as Button;
-        }
-
-        private void btnTerasK_Click(object sender, EventArgs e)
+        private void flpLayoutPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }

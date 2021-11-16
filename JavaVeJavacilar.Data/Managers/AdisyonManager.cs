@@ -22,9 +22,6 @@ namespace JavaVeJavacilar.Data.Managers
                 yeni.Toplam += s.Urunler.Sum(s => s.Adet * s.Urun.Fiyat);
             }
 
-            masa.DoluMu = false;
-            masa.Siparisler = new List<Siparis>();
-
             return Ekle(yeni);
         }
 
