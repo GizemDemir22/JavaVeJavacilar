@@ -158,6 +158,11 @@ namespace JavaVeJavacilar.Forms
         {
 
         }
+
+        private void listUrunler_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

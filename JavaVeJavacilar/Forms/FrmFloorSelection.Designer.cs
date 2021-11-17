@@ -31,7 +31,7 @@ namespace JavaVeJavacilar.Forms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFloorSelection));
             this.flpLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.pnlKatlar = new System.Windows.Forms.Panel();
+            this.flpKatlar = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // flpLayoutPanel
@@ -44,12 +44,13 @@ namespace JavaVeJavacilar.Forms
             this.flpLayoutPanel.TabIndex = 4;
             this.flpLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.flpLayoutPanel_Paint);
             // 
-            // pnlKatlar
+            // flpKatlar
             // 
-            this.pnlKatlar.Location = new System.Drawing.Point(32, 13);
-            this.pnlKatlar.Name = "pnlKatlar";
-            this.pnlKatlar.Size = new System.Drawing.Size(802, 125);
-            this.pnlKatlar.TabIndex = 5;
+            this.flpKatlar.Location = new System.Drawing.Point(32, 28);
+            this.flpKatlar.Name = "flpKatlar";
+            this.flpKatlar.Size = new System.Drawing.Size(802, 110);
+            this.flpKatlar.TabIndex = 5;
+            this.flpKatlar.Paint += new System.Windows.Forms.PaintEventHandler(this.flpKatlar_Paint);
             // 
             // FrmFloorSelection
             // 
@@ -57,7 +58,7 @@ namespace JavaVeJavacilar.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(870, 611);
-            this.Controls.Add(this.pnlKatlar);
+            this.Controls.Add(this.flpKatlar);
             this.Controls.Add(this.flpLayoutPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmFloorSelection";
@@ -70,6 +71,6 @@ namespace JavaVeJavacilar.Forms
 
         #endregion
         private System.Windows.Forms.FlowLayoutPanel flpLayoutPanel;
-        private System.Windows.Forms.Panel pnlKatlar;
+        private System.Windows.Forms.FlowLayoutPanel flpKatlar;
     }
 }

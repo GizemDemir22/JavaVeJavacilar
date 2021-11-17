@@ -100,7 +100,7 @@ namespace JavaVeJavacilar.Forms
                     Size = new Size(125, 125)
                 };
 
-                pnlKatlar.Controls.Add(btn);
+                flpKatlar.Controls.Add(btn);
 
                 btn.Click += (sender, args) =>
                 {
@@ -113,6 +113,16 @@ namespace JavaVeJavacilar.Forms
         }
 
         private void flpLayoutPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnlKatlar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void flpKatlar_Paint(object sender, PaintEventArgs e)
         {
 
         }

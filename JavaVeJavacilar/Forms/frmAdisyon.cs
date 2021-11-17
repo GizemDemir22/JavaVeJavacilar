@@ -129,5 +129,10 @@ namespace JavaVeJavacilar.Forms
                 this.DialogResult = DialogResult.OK;
             }
         }
+
+        private void listSiparis_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
