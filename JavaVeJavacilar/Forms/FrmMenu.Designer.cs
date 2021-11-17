@@ -37,6 +37,7 @@ namespace JavaVeJavacilar.Forms
             this.lstOzet = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAdisyon
@@ -71,10 +72,10 @@ namespace JavaVeJavacilar.Forms
             // listUrunler
             // 
             this.listUrunler.HideSelection = false;
-            this.listUrunler.Location = new System.Drawing.Point(20, 16);
+            this.listUrunler.Location = new System.Drawing.Point(112, 12);
             this.listUrunler.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.listUrunler.Name = "listUrunler";
-            this.listUrunler.Size = new System.Drawing.Size(760, 487);
+            this.listUrunler.Size = new System.Drawing.Size(668, 491);
             this.listUrunler.TabIndex = 11;
             this.listUrunler.UseCompatibleStateImageBehavior = false;
             this.listUrunler.SelectedIndexChanged += new System.EventHandler(this.listUrunler_SelectedIndexChanged);
@@ -85,11 +86,11 @@ namespace JavaVeJavacilar.Forms
             this.listHesap.BackColor = System.Drawing.Color.Black;
             this.listHesap.ForeColor = System.Drawing.Color.Goldenrod;
             this.listHesap.FormattingEnabled = true;
-            this.listHesap.ItemHeight = 27;
+            this.listHesap.ItemHeight = 20;
             this.listHesap.Location = new System.Drawing.Point(812, 73);
             this.listHesap.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.listHesap.Name = "listHesap";
-            this.listHesap.Size = new System.Drawing.Size(269, 355);
+            this.listHesap.Size = new System.Drawing.Size(269, 344);
             this.listHesap.TabIndex = 12;
             this.listHesap.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listHesap_MouseDoubleClick);
             // 
@@ -98,11 +99,11 @@ namespace JavaVeJavacilar.Forms
             this.lstOzet.BackColor = System.Drawing.Color.Black;
             this.lstOzet.ForeColor = System.Drawing.Color.Goldenrod;
             this.lstOzet.FormattingEnabled = true;
-            this.lstOzet.ItemHeight = 27;
+            this.lstOzet.ItemHeight = 20;
             this.lstOzet.Location = new System.Drawing.Point(1100, 73);
             this.lstOzet.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.lstOzet.Name = "lstOzet";
-            this.lstOzet.Size = new System.Drawing.Size(280, 355);
+            this.lstOzet.Size = new System.Drawing.Size(280, 344);
             this.lstOzet.TabIndex = 13;
             // 
             // label1
@@ -114,7 +115,7 @@ namespace JavaVeJavacilar.Forms
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(4);
-            this.label1.Size = new System.Drawing.Size(142, 35);
+            this.label1.Size = new System.Drawing.Size(101, 28);
             this.label1.TabIndex = 14;
             this.label1.Text = "Masa Özeti ";
             // 
@@ -127,16 +128,30 @@ namespace JavaVeJavacilar.Forms
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(4);
-            this.label2.Size = new System.Drawing.Size(153, 35);
+            this.label2.Size = new System.Drawing.Size(105, 28);
             this.label2.TabIndex = 15;
             this.label2.Text = "Yeni Sipariş ";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.Goldenrod;
+            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(92, 41);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Geri";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 27F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::JavaVeJavacilar.Properties.Resources.background;
-            this.ClientSize = new System.Drawing.Size(1394, 516);
+            this.ClientSize = new System.Drawing.Size(1370, 516);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lstOzet);
@@ -144,7 +159,7 @@ namespace JavaVeJavacilar.Forms
             this.Controls.Add(this.listUrunler);
             this.Controls.Add(this.btnKaydet);
             this.Controls.Add(this.btnAdisyon);
-            this.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -168,5 +183,6 @@ namespace JavaVeJavacilar.Forms
         private System.Windows.Forms.ListBox lstOzet;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
     }
 }

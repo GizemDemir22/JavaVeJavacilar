@@ -43,11 +43,11 @@ namespace JavaVeJavacilar.Forms
             this.lstUrunTurleri.BackColor = System.Drawing.Color.Black;
             this.lstUrunTurleri.ForeColor = System.Drawing.Color.Goldenrod;
             this.lstUrunTurleri.FormattingEnabled = true;
-            this.lstUrunTurleri.ItemHeight = 27;
+            this.lstUrunTurleri.ItemHeight = 20;
             this.lstUrunTurleri.Location = new System.Drawing.Point(573, 25);
             this.lstUrunTurleri.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.lstUrunTurleri.Name = "lstUrunTurleri";
-            this.lstUrunTurleri.Size = new System.Drawing.Size(445, 490);
+            this.lstUrunTurleri.Size = new System.Drawing.Size(445, 484);
             this.lstUrunTurleri.TabIndex = 0;
             this.lstUrunTurleri.SelectedIndexChanged += new System.EventHandler(this.lstUrunTurleri_SelectedIndexChanged);
             // 
@@ -80,7 +80,7 @@ namespace JavaVeJavacilar.Forms
             this.txtTurAdi.Location = new System.Drawing.Point(213, 141);
             this.txtTurAdi.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtTurAdi.Name = "txtTurAdi";
-            this.txtTurAdi.Size = new System.Drawing.Size(278, 34);
+            this.txtTurAdi.Size = new System.Drawing.Size(278, 26);
             this.txtTurAdi.TabIndex = 3;
             this.txtTurAdi.TextChanged += new System.EventHandler(this.txtTurAdi_TextChanged);
             // 
@@ -92,7 +92,7 @@ namespace JavaVeJavacilar.Forms
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(4);
-            this.label1.Size = new System.Drawing.Size(137, 35);
+            this.label1.Size = new System.Drawing.Size(92, 28);
             this.label1.TabIndex = 4;
             this.label1.Text = "Ürün Türü ";
             // 
@@ -110,7 +110,7 @@ namespace JavaVeJavacilar.Forms
             // 
             // frmUrunTurleri
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 27F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::JavaVeJavacilar.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(1066, 545);
@@ -120,7 +120,7 @@ namespace JavaVeJavacilar.Forms
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.lstUrunTurleri);
-            this.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.Goldenrod;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -128,6 +128,7 @@ namespace JavaVeJavacilar.Forms
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmUrunTurleri";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "URUN TURLERI";
             this.Load += new System.EventHandler(this.frmUrunTurleri_Load);
             this.ResumeLayout(false);

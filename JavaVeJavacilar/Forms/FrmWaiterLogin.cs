@@ -18,9 +18,11 @@ namespace JavaVeJavacilar.Forms
 {
     public partial class FrmWaiterLogin : Form
     {
-        public FrmWaiterLogin()
+        frmYoneticiMiGarsonMi frmYoneticiMiGarsonMi;
+        public FrmWaiterLogin(frmYoneticiMiGarsonMi frmYoneticiMiGarsonMi)
         {
             InitializeComponent();
+            this.frmYoneticiMiGarsonMi = frmYoneticiMiGarsonMi;
         }
         private void btnGiris_Click(object sender, EventArgs e)
         {
@@ -29,7 +31,7 @@ namespace JavaVeJavacilar.Forms
 
             if (manager.GirisYap(txtKullaniciAdi.Text, txtSifre.Text))
             {
-                FrmFloorSelection frmfloorSelection = new FrmFloorSelection();
+                FrmFloorSelection frmfloorSelection = new FrmFloorSelection(this);
                 frmfloorSelection.Show();
                 this.Hide();
             }
@@ -38,6 +40,12 @@ namespace JavaVeJavacilar.Forms
                 MessageBox.Show("Kullanıcı adı veya şifre hatalı!", "Hatalı Giriş", MessageBoxButtons.OK, MessageBoxIcon.Question);
             }
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.frmYoneticiMiGarsonMi.Show();
         }
     }
 }

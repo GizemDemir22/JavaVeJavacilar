@@ -12,8 +12,10 @@ namespace JavaVeJavacilar.Forms
 {
     public partial class frmYoneticiYetkileri : Form
     {
-        public frmYoneticiYetkileri()
+        frmYoneticiGiris frmYoneticiGiris;
+        public frmYoneticiYetkileri(frmYoneticiGiris frmYoneticiGiris)
         {
+            this.frmYoneticiGiris = frmYoneticiGiris;
             InitializeComponent();
         }
 
@@ -44,6 +46,12 @@ namespace JavaVeJavacilar.Forms
         {
             var f = new FrmAnaRapor();
             f.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.frmYoneticiGiris.Show();
         }
     }
 }

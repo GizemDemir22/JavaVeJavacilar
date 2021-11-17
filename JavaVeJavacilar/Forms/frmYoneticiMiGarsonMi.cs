@@ -12,26 +12,25 @@ namespace JavaVeJavacilar.Forms
 {
     public partial class frmYoneticiMiGarsonMi : Form
     {
-        frmYoneticiGiris frm;
+        frmYoneticiGiris frmYoneticiGiris;
+        FrmWaiterLogin frmWaiterLogin;
         public frmYoneticiMiGarsonMi()
         {
             InitializeComponent();
-            frm = new frmYoneticiGiris(this);
+            frmYoneticiGiris = new frmYoneticiGiris(this);
+            frmWaiterLogin = new FrmWaiterLogin(this);
         }
 
         private void btnYonetici_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frm.Show();
+            frmYoneticiGiris.Show();
         }
 
         private void btnGarson_Click(object sender, EventArgs e)
         {
             this.Hide();
-
-            Form f = new FrmWaiterLogin();
-
-            f.Show();
+            frmWaiterLogin.Show();            
         }
 
         private void frmYoneticiMiGarsonMi_Load(object sender, EventArgs e)

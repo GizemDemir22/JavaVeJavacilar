@@ -23,7 +23,7 @@ namespace JavaVeJavacilar.Forms
         {
             if (txtKullaniciAdi.Text == "admin" && txtSifre.Text == "admin")
             {
-                var f = new frmYoneticiYetkileri();
+                var f = new frmYoneticiYetkileri(this);
                 f.Show();
                 this.Hide();
             }

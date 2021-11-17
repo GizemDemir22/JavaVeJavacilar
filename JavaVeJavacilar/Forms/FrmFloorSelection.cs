@@ -17,8 +17,12 @@ namespace JavaVeJavacilar.Forms
 {
     public partial class FrmFloorSelection : Form
     {
-        public FrmFloorSelection()
+        FrmWaiterLogin frmWaiterLogin;
+        FrmMenu fm;
+
+        public FrmFloorSelection(FrmWaiterLogin frmWaiterLogin)
         {
+            this.frmWaiterLogin = frmWaiterLogin;
             InitializeComponent();
         }
 
@@ -36,7 +40,7 @@ namespace JavaVeJavacilar.Forms
                     Text = masa.MasaAdi,
                     Name = "btn" + masa.MasaAdi,
                     Font = new Font("Trebuchet MS", 11.25F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(162))),
-                    Size = new Size(125, 125),
+                    Size = new Size(80, 80),
                     ForeColor = Color.White
                 };
 
@@ -54,11 +58,11 @@ namespace JavaVeJavacilar.Forms
                 {
                     seciliButon = sender as Button;
                     //Renklendir(seciliButon);
-
-                    FrmMenu frmmenu = new FrmMenu();
-                    frmmenu.masa = masa;
+                    fm = new FrmMenu(this);
+                
+                    fm.masa = masa;
                     
-                    if(frmmenu.ShowDialog(this) == DialogResult.OK)
+                    if(fm.ShowDialog(this) == DialogResult.OK)
                     {
                         if (SeciliKategori != null)
                             SeciliKategori.PerformClick();
@@ -98,7 +102,7 @@ namespace JavaVeJavacilar.Forms
                     Text = katbilgisi.KatBilgisi,
                     Name = "btn" + katbilgisi.KatBilgisi,
                     Font = new Font("Trebuchet MS", 11.25F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(162))),
-                    Size = new Size(125, 125),
+                    Size = new Size(80, 80),
                     BackColor = bosRenk,
                     ForeColor= Color.White
                 };
@@ -113,6 +117,12 @@ namespace JavaVeJavacilar.Forms
 
             }
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.frmWaiterLogin.Show();
         }
     }
 }

@@ -23,9 +23,11 @@ namespace JavaVeJavacilar.Forms
 
         public Masa masa;
 
-        public FrmMenu()
+        FrmFloorSelection frmFloorSelection;
+        public FrmMenu(FrmFloorSelection frmFloorSelection)
         {
             InitializeComponent();
+            this.frmFloorSelection = frmFloorSelection;
         }
 
         private void FrmMenu_Load(object sender, EventArgs e)
@@ -162,6 +164,12 @@ namespace JavaVeJavacilar.Forms
         private void listUrunler_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.frmFloorSelection.Show();
         }
     }
 

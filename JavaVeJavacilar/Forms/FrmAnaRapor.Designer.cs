@@ -40,10 +40,10 @@ namespace JavaVeJavacilar.Forms
             this.btnGunlukRapor.BackColor = System.Drawing.Color.Black;
             this.btnGunlukRapor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnGunlukRapor.ForeColor = System.Drawing.Color.Goldenrod;
-            this.btnGunlukRapor.Location = new System.Drawing.Point(138, 242);
-            this.btnGunlukRapor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGunlukRapor.Location = new System.Drawing.Point(97, 145);
+            this.btnGunlukRapor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGunlukRapor.Name = "btnGunlukRapor";
-            this.btnGunlukRapor.Size = new System.Drawing.Size(287, 76);
+            this.btnGunlukRapor.Size = new System.Drawing.Size(201, 46);
             this.btnGunlukRapor.TabIndex = 0;
             this.btnGunlukRapor.Text = "Günlük Rapor";
             this.btnGunlukRapor.UseVisualStyleBackColor = false;
@@ -55,10 +55,10 @@ namespace JavaVeJavacilar.Forms
             this.btnAylıkRapor.BackColor = System.Drawing.Color.Black;
             this.btnAylıkRapor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAylıkRapor.ForeColor = System.Drawing.Color.Goldenrod;
-            this.btnAylıkRapor.Location = new System.Drawing.Point(681, 242);
-            this.btnAylıkRapor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAylıkRapor.Location = new System.Drawing.Point(477, 145);
+            this.btnAylıkRapor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAylıkRapor.Name = "btnAylıkRapor";
-            this.btnAylıkRapor.Size = new System.Drawing.Size(287, 76);
+            this.btnAylıkRapor.Size = new System.Drawing.Size(201, 46);
             this.btnAylıkRapor.TabIndex = 1;
             this.btnAylıkRapor.Text = "Aylık Rapor";
             this.btnAylıkRapor.UseVisualStyleBackColor = false;
@@ -66,15 +66,16 @@ namespace JavaVeJavacilar.Forms
             // 
             // FrmAnaRapor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::JavaVeJavacilar.Properties.Resources.background;
-            this.ClientSize = new System.Drawing.Size(1113, 550);
+            this.ClientSize = new System.Drawing.Size(779, 330);
             this.Controls.Add(this.btnAylıkRapor);
             this.Controls.Add(this.btnGunlukRapor);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmAnaRapor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RAPOR CESITLERI";
             this.ResumeLayout(false);
 
