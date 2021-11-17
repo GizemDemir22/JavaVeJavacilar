@@ -22,18 +22,12 @@ namespace JavaVeJavacilar.Forms
         {
             InitializeComponent();
         }
-
-        private void FrmWaiterLogin_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnGiris_Click(object sender, EventArgs e)
         {
 
             var manager = new LoginManager();
 
-            if (manager.GirisYap(txtAdSoyad.Text, txtSifre.Text))
+            if (manager.GirisYap(txtKullaniciAdi.Text, txtSifre.Text))
             {
                 FrmFloorSelection frmfloorSelection = new FrmFloorSelection();
                 frmfloorSelection.Show();
@@ -45,8 +39,6 @@ namespace JavaVeJavacilar.Forms
             }
 
         }
-
-        
     }
 }
 

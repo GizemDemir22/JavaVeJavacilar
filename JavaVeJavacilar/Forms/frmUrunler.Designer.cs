@@ -29,6 +29,7 @@ namespace JavaVeJavacilar.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUrunler));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,60 +51,75 @@ namespace JavaVeJavacilar.Forms
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(50, 29);
+            this.label1.BackColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(24, 54);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 20);
+            this.label1.Padding = new System.Windows.Forms.Padding(4);
+            this.label1.Size = new System.Drawing.Size(120, 35);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Ürün Adı:";
+            this.label1.Text = "Ürün Adı ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 62);
+            this.label2.BackColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(24, 106);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 20);
+            this.label2.Padding = new System.Windows.Forms.Padding(4);
+            this.label2.Size = new System.Drawing.Size(145, 35);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Ürün Fiyatı:";
+            this.label2.Text = "Ürün Fiyatı ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(47, 126);
+            this.label3.BackColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(24, 211);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 20);
+            this.label3.Padding = new System.Windows.Forms.Padding(4);
+            this.label3.Size = new System.Drawing.Size(118, 35);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Açıklama:";
+            this.label3.Text = "Açıklama";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(66, 188);
+            this.label4.BackColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(24, 294);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 20);
+            this.label4.Padding = new System.Windows.Forms.Padding(4);
+            this.label4.Size = new System.Drawing.Size(95, 35);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Görsel:";
+            this.label4.Text = "Görsel ";
             // 
             // txtUrunAdi
             // 
-            this.txtUrunAdi.Location = new System.Drawing.Point(126, 26);
+            this.txtUrunAdi.Location = new System.Drawing.Point(192, 51);
+            this.txtUrunAdi.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtUrunAdi.Name = "txtUrunAdi";
-            this.txtUrunAdi.Size = new System.Drawing.Size(266, 27);
+            this.txtUrunAdi.Size = new System.Drawing.Size(368, 34);
             this.txtUrunAdi.TabIndex = 4;
             // 
             // txtAciklama
             // 
-            this.txtAciklama.Location = new System.Drawing.Point(126, 126);
+            this.txtAciklama.Location = new System.Drawing.Point(192, 199);
+            this.txtAciklama.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtAciklama.Multiline = true;
             this.txtAciklama.Name = "txtAciklama";
-            this.txtAciklama.Size = new System.Drawing.Size(266, 56);
+            this.txtAciklama.Size = new System.Drawing.Size(368, 57);
             this.txtAciklama.TabIndex = 6;
             // 
             // pbUrunGorsel
             // 
             this.pbUrunGorsel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbUrunGorsel.Location = new System.Drawing.Point(126, 188);
+            this.pbUrunGorsel.Location = new System.Drawing.Point(192, 273);
+            this.pbUrunGorsel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.pbUrunGorsel.Name = "pbUrunGorsel";
-            this.pbUrunGorsel.Size = new System.Drawing.Size(266, 112);
+            this.pbUrunGorsel.Size = new System.Drawing.Size(368, 190);
             this.pbUrunGorsel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbUrunGorsel.TabIndex = 7;
             this.pbUrunGorsel.TabStop = false;
@@ -111,75 +127,91 @@ namespace JavaVeJavacilar.Forms
             // 
             // lstUrunler
             // 
+            this.lstUrunler.BackColor = System.Drawing.Color.Black;
+            this.lstUrunler.ForeColor = System.Drawing.Color.Goldenrod;
             this.lstUrunler.FormattingEnabled = true;
-            this.lstUrunler.ItemHeight = 20;
-            this.lstUrunler.Location = new System.Drawing.Point(431, 29);
+            this.lstUrunler.ItemHeight = 27;
+            this.lstUrunler.Location = new System.Drawing.Point(595, 39);
+            this.lstUrunler.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.lstUrunler.Name = "lstUrunler";
-            this.lstUrunler.Size = new System.Drawing.Size(306, 284);
+            this.lstUrunler.Size = new System.Drawing.Size(423, 436);
             this.lstUrunler.TabIndex = 8;
             this.lstUrunler.SelectedIndexChanged += new System.EventHandler(this.lstUrunler_SelectedIndexChanged);
             // 
             // btnEkle
             // 
-            this.btnEkle.Location = new System.Drawing.Point(156, 323);
+            this.btnEkle.BackColor = System.Drawing.Color.Black;
+            this.btnEkle.Location = new System.Drawing.Point(192, 478);
+            this.btnEkle.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(94, 29);
+            this.btnEkle.Size = new System.Drawing.Size(192, 54);
             this.btnEkle.TabIndex = 10;
             this.btnEkle.Text = "Ekle";
-            this.btnEkle.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.UseVisualStyleBackColor = false;
             this.btnEkle.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnGuncelle
             // 
-            this.btnGuncelle.Location = new System.Drawing.Point(269, 323);
+            this.btnGuncelle.BackColor = System.Drawing.Color.Black;
+            this.btnGuncelle.Location = new System.Drawing.Point(405, 478);
+            this.btnGuncelle.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(94, 29);
+            this.btnGuncelle.Size = new System.Drawing.Size(155, 54);
             this.btnGuncelle.TabIndex = 11;
             this.btnGuncelle.Text = "Güncelle";
-            this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.UseVisualStyleBackColor = false;
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // btnSil
             // 
-            this.btnSil.Location = new System.Drawing.Point(431, 323);
+            this.btnSil.BackColor = System.Drawing.Color.Black;
+            this.btnSil.Location = new System.Drawing.Point(595, 483);
+            this.btnSil.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(94, 29);
+            this.btnSil.Size = new System.Drawing.Size(423, 52);
             this.btnSil.TabIndex = 12;
             this.btnSil.Text = "Sil";
-            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.UseVisualStyleBackColor = false;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // txtFiyat
             // 
-            this.txtFiyat.Location = new System.Drawing.Point(126, 59);
+            this.txtFiyat.Location = new System.Drawing.Point(192, 103);
+            this.txtFiyat.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtFiyat.Name = "txtFiyat";
-            this.txtFiyat.Size = new System.Drawing.Size(124, 27);
+            this.txtFiyat.Size = new System.Drawing.Size(368, 34);
             this.txtFiyat.TabIndex = 13;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(44, 95);
+            this.label5.BackColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(24, 155);
+            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 20);
+            this.label5.Padding = new System.Windows.Forms.Padding(4);
+            this.label5.Size = new System.Drawing.Size(137, 35);
             this.label5.TabIndex = 14;
-            this.label5.Text = "Ürün Türü:";
+            this.label5.Text = "Ürün Türü ";
             // 
             // cbTurler
             // 
             this.cbTurler.FormattingEnabled = true;
-            this.cbTurler.Location = new System.Drawing.Point(126, 92);
+            this.cbTurler.Location = new System.Drawing.Point(192, 152);
+            this.cbTurler.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.cbTurler.Name = "cbTurler";
-            this.cbTurler.Size = new System.Drawing.Size(266, 28);
+            this.cbTurler.Size = new System.Drawing.Size(368, 35);
             this.cbTurler.TabIndex = 15;
             // 
             // lnkTemizle
             // 
             this.lnkTemizle.AutoSize = true;
-            this.lnkTemizle.Location = new System.Drawing.Point(332, 3);
+            this.lnkTemizle.BackColor = System.Drawing.Color.Black;
+            this.lnkTemizle.LinkColor = System.Drawing.Color.Goldenrod;
+            this.lnkTemizle.Location = new System.Drawing.Point(468, 9);
+            this.lnkTemizle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lnkTemizle.Name = "lnkTemizle";
-            this.lnkTemizle.Size = new System.Drawing.Size(60, 20);
+            this.lnkTemizle.Size = new System.Drawing.Size(92, 27);
             this.lnkTemizle.TabIndex = 16;
             this.lnkTemizle.TabStop = true;
             this.lnkTemizle.Text = "Temizle";
@@ -187,9 +219,10 @@ namespace JavaVeJavacilar.Forms
             // 
             // frmUrunler
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(789, 383);
+            this.BackgroundImage = global::JavaVeJavacilar.Properties.Resources.background;
+            this.ClientSize = new System.Drawing.Size(1066, 545);
             this.Controls.Add(this.lnkTemizle);
             this.Controls.Add(this.cbTurler);
             this.Controls.Add(this.label5);
@@ -205,7 +238,13 @@ namespace JavaVeJavacilar.Forms
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ForeColor = System.Drawing.Color.Goldenrod;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmUrunler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Ürünler";

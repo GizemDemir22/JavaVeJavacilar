@@ -77,29 +77,16 @@ namespace JavaVeJavacilar.Forms
             }
         }
 
-        private void listUrunler_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            if(listUrunler.SelectedItems.Count == 1)
-            {
-                var selectedItem = listUrunler.SelectedItems[0].Tag as Urun;
+ 
 
-                listHesap.Items.Add(selectedItem);
-            }
-        }
 
-        private void listHesap_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            if(listHesap.SelectedItems.Count == 1)
-            {
-                listHesap.Items.Remove(listHesap.SelectedItem);
-            }
-        }
+
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             var seciliUrunler = new List<Urun>();
 
-            foreach(var urun in listHesap.Items)
+            foreach (var urun in listHesap.Items)
             {
                 seciliUrunler.Add((Urun)urun);
             }
@@ -112,9 +99,9 @@ namespace JavaVeJavacilar.Forms
 
             var siparisItems = new List<SiparisSatir>();
 
-            foreach(var urun in seciliUrunler)
+            foreach (var urun in seciliUrunler)
             {
-                if(siparisItems.Any(s => s.Urun == urun))
+                if (siparisItems.Any(s => s.Urun == urun))
                 {
                     int index = siparisItems.FindIndex(u => u.Urun == urun);
                     siparisItems[index].Adet = siparisItems[index].Adet + 1;
@@ -139,9 +126,19 @@ namespace JavaVeJavacilar.Forms
             this.DialogResult = DialogResult.OK;
         }
 
+        private void listUrunler_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+            if (listUrunler.SelectedItems.Count == 1)
+            {
+                var selectedItem = listUrunler.SelectedItems[0].Tag as Urun;
+
+                listHesap.Items.Add(selectedItem);
+            }
+        }
+
         private void btnAdisyon_Click(object sender, EventArgs e)
         {
-           
             var f = new frmAdisyon();
 
             f.Masa = masa;
@@ -154,9 +151,12 @@ namespace JavaVeJavacilar.Forms
             }
         }
 
-        private void lstOzet_SelectedIndexChanged(object sender, EventArgs e)
+        private void listHesap_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-
+            if (listHesap.SelectedItems.Count == 1)
+            {
+                listHesap.Items.Remove(listHesap.SelectedItem);
+            }
         }
 
         private void listUrunler_SelectedIndexChanged(object sender, EventArgs e)

@@ -31,84 +31,119 @@ namespace JavaVeJavacilar.Forms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmWaiterLogin));
             this.btnGiris = new System.Windows.Forms.Button();
-            this.txtAdSoyad = new System.Windows.Forms.TextBox();
             this.txtSifre = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txtKullaniciAdi = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtParola = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnGiris
             // 
-            this.btnGiris.Location = new System.Drawing.Point(341, 61);
+            this.btnGiris.BackColor = System.Drawing.Color.Black;
+            this.btnGiris.Font = new System.Drawing.Font("Britannic Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnGiris.ForeColor = System.Drawing.Color.Goldenrod;
+            this.btnGiris.Location = new System.Drawing.Point(658, 398);
+            this.btnGiris.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGiris.Name = "btnGiris";
-            this.btnGiris.Size = new System.Drawing.Size(94, 64);
-            this.btnGiris.TabIndex = 0;
+            this.btnGiris.Size = new System.Drawing.Size(265, 53);
+            this.btnGiris.TabIndex = 11;
             this.btnGiris.Text = "Giriş";
-            this.btnGiris.UseVisualStyleBackColor = true;
+            this.btnGiris.UseVisualStyleBackColor = false;
             this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
-            // 
-            // txtAdSoyad
-            // 
-            this.txtAdSoyad.Location = new System.Drawing.Point(331, 165);
-            this.txtAdSoyad.Name = "txtAdSoyad";
-            this.txtAdSoyad.Size = new System.Drawing.Size(125, 27);
-            this.txtAdSoyad.TabIndex = 1;
-            this.txtAdSoyad.Text = "gizem";
             // 
             // txtSifre
             // 
-            this.txtSifre.Location = new System.Drawing.Point(331, 267);
+            this.txtSifre.BackColor = System.Drawing.Color.Black;
+            this.txtSifre.Font = new System.Drawing.Font("Britannic Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtSifre.ForeColor = System.Drawing.Color.Goldenrod;
+            this.txtSifre.Location = new System.Drawing.Point(658, 343);
+            this.txtSifre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.PasswordChar = '*';
-            this.txtSifre.Size = new System.Drawing.Size(125, 27);
-            this.txtSifre.TabIndex = 2;
-            this.txtSifre.Text = "123123";
+            this.txtSifre.Size = new System.Drawing.Size(265, 32);
+            this.txtSifre.TabIndex = 1;
             // 
-            // label1
+            // txtKullaniciAdi
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(195, 273);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "şifre";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(195, 172);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 20);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Garson Adı Soyadı";
+            this.txtKullaniciAdi.BackColor = System.Drawing.Color.Black;
+            this.txtKullaniciAdi.Font = new System.Drawing.Font("Britannic Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtKullaniciAdi.ForeColor = System.Drawing.Color.Goldenrod;
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(658, 288);
+            this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtKullaniciAdi.Name = "txtKullaniciAdi";
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(265, 32);
+            this.txtKullaniciAdi.TabIndex = 0;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 388);
+            this.label3.BackColor = System.Drawing.Color.Black;
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Font = new System.Drawing.Font("Britannic Bold", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.Goldenrod;
+            this.label3.Location = new System.Drawing.Point(498, 213);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(134, 20);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Garson Giriş Formu";
+            this.label3.Padding = new System.Windows.Forms.Padding(3);
+            this.label3.Size = new System.Drawing.Size(425, 55);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Personel Giriş Ekranı";
+            // 
+            // txtParola
+            // 
+            this.txtParola.AutoSize = true;
+            this.txtParola.BackColor = System.Drawing.Color.Black;
+            this.txtParola.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.txtParola.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txtParola.Font = new System.Drawing.Font("Britannic Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtParola.ForeColor = System.Drawing.Color.Goldenrod;
+            this.txtParola.Location = new System.Drawing.Point(498, 346);
+            this.txtParola.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.txtParola.Name = "txtParola";
+            this.txtParola.Padding = new System.Windows.Forms.Padding(3);
+            this.txtParola.Size = new System.Drawing.Size(84, 33);
+            this.txtParola.TabIndex = 7;
+            this.txtParola.Text = "Parola";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Black;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Britannic Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.Goldenrod;
+            this.label1.Location = new System.Drawing.Point(498, 291);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(3);
+            this.label1.Size = new System.Drawing.Size(142, 33);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Kullanıcı Adı";
             // 
             // FrmWaiterLogin
             // 
             this.AcceptButton = this.btnGiris;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(800, 451);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtSifre);
-            this.Controls.Add(this.txtAdSoyad);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackgroundImage = global::JavaVeJavacilar.Properties.Resources.icon_back;
+            this.ClientSize = new System.Drawing.Size(1328, 535);
             this.Controls.Add(this.btnGiris);
+            this.Controls.Add(this.txtSifre);
+            this.Controls.Add(this.txtKullaniciAdi);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtParola);
+            this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmWaiterLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmWaiter";
-            this.Load += new System.EventHandler(this.FrmWaiterLogin_Load);
+            this.Text = "Personel";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -117,10 +152,11 @@ namespace JavaVeJavacilar.Forms
         #endregion
 
         private System.Windows.Forms.Button btnGiris;
-        private System.Windows.Forms.TextBox txtAdSoyad;
         private System.Windows.Forms.TextBox txtSifre;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtAdSoyad;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label txtParola;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtKullaniciAdi;
     }
 }

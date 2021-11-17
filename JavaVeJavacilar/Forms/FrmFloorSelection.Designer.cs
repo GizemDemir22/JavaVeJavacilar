@@ -29,38 +29,42 @@ namespace JavaVeJavacilar.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFloorSelection));
             this.flpLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.flpKatlar = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // flpLayoutPanel
             // 
-            this.flpLayoutPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("flpLayoutPanel.BackgroundImage")));
-            this.flpLayoutPanel.Location = new System.Drawing.Point(32, 144);
+            this.flpLayoutPanel.Location = new System.Drawing.Point(155, 305);
+            this.flpLayoutPanel.Margin = new System.Windows.Forms.Padding(4);
             this.flpLayoutPanel.Name = "flpLayoutPanel";
-            this.flpLayoutPanel.Padding = new System.Windows.Forms.Padding(5);
-            this.flpLayoutPanel.Size = new System.Drawing.Size(802, 447);
+            this.flpLayoutPanel.Padding = new System.Windows.Forms.Padding(6);
+            this.flpLayoutPanel.Size = new System.Drawing.Size(1258, 99);
             this.flpLayoutPanel.TabIndex = 4;
             this.flpLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.flpLayoutPanel_Paint);
             // 
             // flpKatlar
             // 
-            this.flpKatlar.Location = new System.Drawing.Point(32, 28);
-            this.flpKatlar.Name = "flpKatlar";
-            this.flpKatlar.Size = new System.Drawing.Size(802, 110);
-            this.flpKatlar.TabIndex = 5;
-            this.flpKatlar.Paint += new System.Windows.Forms.PaintEventHandler(this.flpKatlar_Paint);
+            this.pnlKatlar.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.pnlKatlar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlKatlar.Location = new System.Drawing.Point(13, 26);
+            this.pnlKatlar.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlKatlar.Name = "pnlKatlar";
+            this.pnlKatlar.Size = new System.Drawing.Size(124, 533);
+            this.pnlKatlar.TabIndex = 5;
             // 
             // FrmFloorSelection
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(870, 611);
-            this.Controls.Add(this.flpKatlar);
+            this.BackgroundImage = global::JavaVeJavacilar.Properties.Resources.backimage;
+            this.ClientSize = new System.Drawing.Size(1416, 572);
+            this.Controls.Add(this.pnlKatlar);
             this.Controls.Add(this.flpLayoutPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmFloorSelection";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmFloorSelection";
