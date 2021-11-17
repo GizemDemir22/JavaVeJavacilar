@@ -40,5 +40,11 @@ namespace JavaVeJavacilar.Forms
             var f = new frmKatlar();
             f.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var f = new AnaRapor();
+            f.Show();
+        }
     }
 }

@@ -77,6 +77,7 @@ namespace JavaVeJavacilar.Forms
             this.listUrunler.Size = new System.Drawing.Size(760, 487);
             this.listUrunler.TabIndex = 11;
             this.listUrunler.UseCompatibleStateImageBehavior = false;
+            this.listUrunler.SelectedIndexChanged += new System.EventHandler(this.listUrunler_SelectedIndexChanged);
             this.listUrunler.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listUrunler_MouseDoubleClick);
             // 
             // listHesap

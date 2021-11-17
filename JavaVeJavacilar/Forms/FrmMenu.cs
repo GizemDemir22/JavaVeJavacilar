@@ -158,6 +158,11 @@ namespace JavaVeJavacilar.Forms
                 listHesap.Items.Remove(listHesap.SelectedItem);
             }
         }
+
+        private void listUrunler_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

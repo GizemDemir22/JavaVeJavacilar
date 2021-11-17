@@ -116,5 +116,15 @@ namespace JavaVeJavacilar.Forms
         {
 
         }
+
+        private void pnlKatlar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void flpKatlar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

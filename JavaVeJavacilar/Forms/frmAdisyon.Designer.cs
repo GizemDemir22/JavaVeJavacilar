@@ -78,6 +78,7 @@ namespace JavaVeJavacilar.Forms
             this.listSiparis.TabIndex = 2;
             this.listSiparis.UseCompatibleStateImageBehavior = false;
             this.listSiparis.View = System.Windows.Forms.View.Details;
+            this.listSiparis.SelectedIndexChanged += new System.EventHandler(this.listSiparis_SelectedIndexChanged);
             // 
             // clmUrunAdi
             // 

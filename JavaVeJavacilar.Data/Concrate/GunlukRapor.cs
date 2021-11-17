@@ -8,6 +8,6 @@ using System.Threading.Tasks;
 namespace JavaVeJavacilar.Data.Concrate
 {
     public class GunlukRapor : Rapor
-    {
+    {   
     }
 }
