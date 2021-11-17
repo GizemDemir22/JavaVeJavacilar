@@ -61,11 +61,14 @@ namespace JavaVeJavacilar.Forms
             // lblToplam
             // 
             this.lblToplam.AutoSize = true;
-            this.lblToplam.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblToplam.Location = new System.Drawing.Point(426, 616);
+            this.lblToplam.BackColor = System.Drawing.Color.Black;
+            this.lblToplam.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblToplam.ForeColor = System.Drawing.Color.Goldenrod;
+            this.lblToplam.Location = new System.Drawing.Point(705, 496);
             this.lblToplam.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblToplam.Name = "lblToplam";
-            this.lblToplam.Size = new System.Drawing.Size(163, 32);
+            this.lblToplam.Padding = new System.Windows.Forms.Padding(5);
+            this.lblToplam.Size = new System.Drawing.Size(213, 42);
             this.lblToplam.TabIndex = 1;
             this.lblToplam.Text = "Toplam Tutar:";
             // 
@@ -80,8 +83,8 @@ namespace JavaVeJavacilar.Forms
             this.listSiparis.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.listSiparis.ForeColor = System.Drawing.Color.Goldenrod;
             this.listSiparis.HideSelection = false;
-            this.listSiparis.Location = new System.Drawing.Point(29, 110);
-            this.listSiparis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listSiparis.Location = new System.Drawing.Point(13, 72);
+            this.listSiparis.Margin = new System.Windows.Forms.Padding(4);
             this.listSiparis.Name = "listSiparis";
             this.listSiparis.Size = new System.Drawing.Size(1028, 411);
             this.listSiparis.TabIndex = 2;
@@ -112,23 +115,29 @@ namespace JavaVeJavacilar.Forms
             // lblAdisyonToplam
             // 
             this.lblAdisyonToplam.AutoSize = true;
-            this.lblAdisyonToplam.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblAdisyonToplam.Location = new System.Drawing.Point(602, 616);
+            this.lblAdisyonToplam.BackColor = System.Drawing.Color.Black;
+            this.lblAdisyonToplam.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblAdisyonToplam.ForeColor = System.Drawing.Color.Goldenrod;
+            this.lblAdisyonToplam.Location = new System.Drawing.Point(970, 496);
             this.lblAdisyonToplam.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAdisyonToplam.Name = "lblAdisyonToplam";
-            this.lblAdisyonToplam.Size = new System.Drawing.Size(47, 32);
+            this.lblAdisyonToplam.Padding = new System.Windows.Forms.Padding(5);
+            this.lblAdisyonToplam.Size = new System.Drawing.Size(66, 42);
             this.lblAdisyonToplam.TabIndex = 3;
             this.lblAdisyonToplam.Text = "0 ₺";
             // 
             // btnYazdir
             // 
-            this.btnYazdir.Location = new System.Drawing.Point(15, 620);
-            this.btnYazdir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnYazdir.BackColor = System.Drawing.Color.Black;
+            this.btnYazdir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnYazdir.ForeColor = System.Drawing.Color.Goldenrod;
+            this.btnYazdir.Location = new System.Drawing.Point(13, 496);
+            this.btnYazdir.Margin = new System.Windows.Forms.Padding(4);
             this.btnYazdir.Name = "btnYazdir";
-            this.btnYazdir.Size = new System.Drawing.Size(118, 36);
+            this.btnYazdir.Size = new System.Drawing.Size(204, 54);
             this.btnYazdir.TabIndex = 4;
             this.btnYazdir.Text = "Yazdır";
-            this.btnYazdir.UseVisualStyleBackColor = true;
+            this.btnYazdir.UseVisualStyleBackColor = false;
             this.btnYazdir.Click += new System.EventHandler(this.btnYazdir_Click);
             // 
             // lblMasaNo
@@ -171,7 +180,7 @@ namespace JavaVeJavacilar.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::JavaVeJavacilar.Properties.Resources.background;
-            this.ClientSize = new System.Drawing.Size(1113, 550);
+            this.ClientSize = new System.Drawing.Size(1117, 575);
             this.Controls.Add(this.lblDateTime);
             this.Controls.Add(this.lblMasaNo);
             this.Controls.Add(this.btnYazdir);
@@ -180,7 +189,7 @@ namespace JavaVeJavacilar.Forms
             this.Controls.Add(this.lblToplam);
             this.Controls.Add(this.lblMasa);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAdisyon";

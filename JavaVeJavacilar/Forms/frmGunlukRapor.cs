@@ -60,7 +60,7 @@ namespace JavaVeJavacilar.Forms
                 lvi.SubItems.Add(temp);
             }
 
-            lblToplam.Text = gunlukAdisyonToplam.ToString();
+            lblToplam.Text = $"{gunlukAdisyonToplam.ToString():00₺}";
 
             //decimal Toplam = 0;
             //var günlükrapor = new GunlukRapor();
@@ -104,7 +104,7 @@ namespace JavaVeJavacilar.Forms
 
             //lblAdisyonToplam.Text = Convert.ToString(Toplam) + "₺";
         }
-                }
-            }
+    }
+}
 
 
