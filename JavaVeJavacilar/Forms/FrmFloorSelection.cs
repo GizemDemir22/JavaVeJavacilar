@@ -36,7 +36,7 @@ namespace JavaVeJavacilar.Forms
                     Text = masa.MasaAdi,
                     Name = "btn" + masa.MasaAdi,
                     Font = new Font("Trebuchet MS", 11.25F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(162))),
-                    Size = new Size(150, 150),
+                    Size = new Size(100, 100),
                 };
 
                 if (masa.Siparisler != null && masa.Siparisler.Count > 0)
@@ -68,7 +68,7 @@ namespace JavaVeJavacilar.Forms
             }
         }
 
-        private Color bosRenk = Color.MediumSpringGreen;
+        private Color bosRenk = Color.AliceBlue;
         private Color seciliRenk = Color.Tomato;
         private Color doluRenk = Color.DarkSlateGray;
         private void Renklendir(Button seciliButon)
@@ -100,7 +100,7 @@ namespace JavaVeJavacilar.Forms
                     Size = new Size(125, 125)
                 };
 
-                pnlKatlar.Controls.Add(btn);
+                flpKatlar.Controls.Add(btn);
 
                 btn.Click += (sender, args) =>
                 {

@@ -30,28 +30,25 @@ namespace JavaVeJavacilar.Forms
         private void InitializeComponent()
         {
             this.flpLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.pnlKatlar = new System.Windows.Forms.Panel();
+            this.flpKatlar = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // flpLayoutPanel
             // 
-            this.flpLayoutPanel.Location = new System.Drawing.Point(155, 305);
+            this.flpLayoutPanel.Location = new System.Drawing.Point(162, 305);
             this.flpLayoutPanel.Margin = new System.Windows.Forms.Padding(4);
             this.flpLayoutPanel.Name = "flpLayoutPanel";
             this.flpLayoutPanel.Padding = new System.Windows.Forms.Padding(6);
-            this.flpLayoutPanel.Size = new System.Drawing.Size(1258, 99);
+            this.flpLayoutPanel.Size = new System.Drawing.Size(1251, 107);
             this.flpLayoutPanel.TabIndex = 4;
             this.flpLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.flpLayoutPanel_Paint);
             // 
-            // pnlKatlar
+            // flpKatlar
             // 
-            this.pnlKatlar.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.pnlKatlar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlKatlar.Location = new System.Drawing.Point(13, 26);
-            this.pnlKatlar.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlKatlar.Name = "pnlKatlar";
-            this.pnlKatlar.Size = new System.Drawing.Size(124, 533);
-            this.pnlKatlar.TabIndex = 5;
+            this.flpKatlar.Location = new System.Drawing.Point(12, 12);
+            this.flpKatlar.Name = "flpKatlar";
+            this.flpKatlar.Size = new System.Drawing.Size(143, 548);
+            this.flpKatlar.TabIndex = 5;
             // 
             // FrmFloorSelection
             // 
@@ -61,7 +58,7 @@ namespace JavaVeJavacilar.Forms
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.BackgroundImage = global::JavaVeJavacilar.Properties.Resources.backimage;
             this.ClientSize = new System.Drawing.Size(1416, 572);
-            this.Controls.Add(this.pnlKatlar);
+            this.Controls.Add(this.flpKatlar);
             this.Controls.Add(this.flpLayoutPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -75,6 +72,6 @@ namespace JavaVeJavacilar.Forms
 
         #endregion
         private System.Windows.Forms.FlowLayoutPanel flpLayoutPanel;
-        private System.Windows.Forms.Panel pnlKatlar;
+        private System.Windows.Forms.FlowLayoutPanel flpKatlar;
     }
 }
