@@ -12,9 +12,11 @@ namespace JavaVeJavacilar.Forms
 {
     public partial class frmYoneticiGiris : Form
     {
-        public frmYoneticiGiris()
+        frmYoneticiMiGarsonMi frm;
+        public frmYoneticiGiris(frmYoneticiMiGarsonMi fr)
         {
             InitializeComponent();
+            frm = fr;
         }
 
         private void btnGiris_Click(object sender, EventArgs e)
@@ -29,6 +31,12 @@ namespace JavaVeJavacilar.Forms
             {
                 MessageBox.Show("Hatalı kullanıcı adı/parola.");
             }
+        }
+
+        private void btnGeriGit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm.Show();
         }
     }
 }

@@ -100,7 +100,7 @@ namespace JavaVeJavacilar.Forms
                     Size = new Size(125, 125)
                 };
 
-                flpKatlar.Controls.Add(btn);
+                flpKtl.Controls.Add(btn);
 
                 btn.Click += (sender, args) =>
                 {
