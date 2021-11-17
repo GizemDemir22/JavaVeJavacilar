@@ -36,7 +36,8 @@ namespace JavaVeJavacilar.Forms
                     Text = masa.MasaAdi,
                     Name = "btn" + masa.MasaAdi,
                     Font = new Font("Trebuchet MS", 11.25F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(162))),
-                    Size = new Size(100, 100),
+                    Size = new Size(125, 125),
+                    ForeColor = Color.White
                 };
 
                 if (masa.Siparisler != null && masa.Siparisler.Count > 0)
@@ -68,9 +69,9 @@ namespace JavaVeJavacilar.Forms
             }
         }
 
-        private Color bosRenk = Color.AliceBlue;
+        private Color bosRenk = Color.Black;
         private Color seciliRenk = Color.Tomato;
-        private Color doluRenk = Color.DarkSlateGray;
+        private Color doluRenk = Color.DarkRed;
         private void Renklendir(Button seciliButon)
         {
             foreach (Button item in flpLayoutPanel.Controls)
@@ -97,7 +98,9 @@ namespace JavaVeJavacilar.Forms
                     Text = katbilgisi.KatBilgisi,
                     Name = "btn" + katbilgisi.KatBilgisi,
                     Font = new Font("Trebuchet MS", 11.25F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(162))),
-                    Size = new Size(125, 125)
+                    Size = new Size(125, 125),
+                    BackColor = bosRenk,
+                    ForeColor= Color.White
                 };
 
                 flpKatlar.Controls.Add(btn);
@@ -109,21 +112,6 @@ namespace JavaVeJavacilar.Forms
                 };
 
             }
-
-        }
-
-        private void flpLayoutPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pnlKatlar_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void flpKatlar_Paint(object sender, PaintEventArgs e)
-        {
 
         }
     }

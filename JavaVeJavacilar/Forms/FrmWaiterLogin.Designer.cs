@@ -41,12 +41,12 @@ namespace JavaVeJavacilar.Forms
             // btnGiris
             // 
             this.btnGiris.BackColor = System.Drawing.Color.Black;
-            this.btnGiris.Font = new System.Drawing.Font("Britannic Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnGiris.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnGiris.ForeColor = System.Drawing.Color.Goldenrod;
-            this.btnGiris.Location = new System.Drawing.Point(658, 398);
+            this.btnGiris.Location = new System.Drawing.Point(1036, 452);
             this.btnGiris.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGiris.Name = "btnGiris";
-            this.btnGiris.Size = new System.Drawing.Size(265, 53);
+            this.btnGiris.Size = new System.Drawing.Size(230, 49);
             this.btnGiris.TabIndex = 11;
             this.btnGiris.Text = "Giriş";
             this.btnGiris.UseVisualStyleBackColor = false;
@@ -55,24 +55,24 @@ namespace JavaVeJavacilar.Forms
             // txtSifre
             // 
             this.txtSifre.BackColor = System.Drawing.Color.Black;
-            this.txtSifre.Font = new System.Drawing.Font("Britannic Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtSifre.ForeColor = System.Drawing.Color.Goldenrod;
-            this.txtSifre.Location = new System.Drawing.Point(658, 343);
+            this.txtSifre.Location = new System.Drawing.Point(1036, 397);
             this.txtSifre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.PasswordChar = '*';
-            this.txtSifre.Size = new System.Drawing.Size(265, 32);
+            this.txtSifre.Size = new System.Drawing.Size(230, 35);
             this.txtSifre.TabIndex = 1;
             // 
             // txtKullaniciAdi
             // 
             this.txtKullaniciAdi.BackColor = System.Drawing.Color.Black;
-            this.txtKullaniciAdi.Font = new System.Drawing.Font("Britannic Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtKullaniciAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtKullaniciAdi.ForeColor = System.Drawing.Color.Goldenrod;
-            this.txtKullaniciAdi.Location = new System.Drawing.Point(658, 288);
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(1036, 342);
             this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
-            this.txtKullaniciAdi.Size = new System.Drawing.Size(265, 32);
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(230, 35);
             this.txtKullaniciAdi.TabIndex = 0;
             // 
             // label3
@@ -81,13 +81,13 @@ namespace JavaVeJavacilar.Forms
             this.label3.BackColor = System.Drawing.Color.Black;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("Britannic Bold", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label3.Location = new System.Drawing.Point(498, 213);
+            this.label3.Location = new System.Drawing.Point(842, 267);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(3);
-            this.label3.Size = new System.Drawing.Size(425, 55);
+            this.label3.Size = new System.Drawing.Size(424, 54);
             this.label3.TabIndex = 8;
             this.label3.Text = "Personel Giriş Ekranı";
             // 
@@ -97,13 +97,13 @@ namespace JavaVeJavacilar.Forms
             this.txtParola.BackColor = System.Drawing.Color.Black;
             this.txtParola.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.txtParola.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.txtParola.Font = new System.Drawing.Font("Britannic Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtParola.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtParola.ForeColor = System.Drawing.Color.Goldenrod;
-            this.txtParola.Location = new System.Drawing.Point(498, 346);
+            this.txtParola.Location = new System.Drawing.Point(842, 400);
             this.txtParola.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtParola.Name = "txtParola";
             this.txtParola.Padding = new System.Windows.Forms.Padding(3);
-            this.txtParola.Size = new System.Drawing.Size(84, 33);
+            this.txtParola.Size = new System.Drawing.Size(97, 37);
             this.txtParola.TabIndex = 7;
             this.txtParola.Text = "Parola";
             // 
@@ -113,13 +113,13 @@ namespace JavaVeJavacilar.Forms
             this.label1.BackColor = System.Drawing.Color.Black;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Britannic Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label1.Location = new System.Drawing.Point(498, 291);
+            this.label1.Location = new System.Drawing.Point(842, 345);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(3);
-            this.label1.Size = new System.Drawing.Size(142, 33);
+            this.label1.Size = new System.Drawing.Size(166, 37);
             this.label1.TabIndex = 6;
             this.label1.Text = "Kullanıcı Adı";
             // 
@@ -130,7 +130,8 @@ namespace JavaVeJavacilar.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::JavaVeJavacilar.Properties.Resources.icon_back;
-            this.ClientSize = new System.Drawing.Size(1328, 535);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1290, 546);
             this.Controls.Add(this.btnGiris);
             this.Controls.Add(this.txtSifre);
             this.Controls.Add(this.txtKullaniciAdi);

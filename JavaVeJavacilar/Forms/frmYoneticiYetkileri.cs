@@ -43,7 +43,7 @@ namespace JavaVeJavacilar.Forms
 
         private void button5_Click(object sender, EventArgs e)
         {
-            var f = new AnaRapor();
+            var f = new FrmAnaRapor();
             f.Show();
         }
     }

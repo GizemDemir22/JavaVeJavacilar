@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace JavaVeJavacilar.Forms
 {
-    public partial class AnaRapor : Form
+    public partial class FrmAnaRapor : Form
     {
-        public AnaRapor()
+        public FrmAnaRapor()
         {
             InitializeComponent();
         }

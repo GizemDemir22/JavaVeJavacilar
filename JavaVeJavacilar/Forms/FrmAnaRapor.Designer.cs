@@ -1,7 +1,7 @@
 ﻿
 namespace JavaVeJavacilar.Forms
 {
-    partial class AnaRapor
+    partial class FrmAnaRapor
     {
         /// <summary>
         /// Required designer variable.
@@ -29,39 +29,53 @@ namespace JavaVeJavacilar.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAnaRapor));
             this.btnGunlukRapor = new System.Windows.Forms.Button();
             this.btnAylıkRapor = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnGunlukRapor
             // 
-            this.btnGunlukRapor.Location = new System.Drawing.Point(150, 101);
+            this.btnGunlukRapor.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnGunlukRapor.BackColor = System.Drawing.Color.Black;
+            this.btnGunlukRapor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnGunlukRapor.ForeColor = System.Drawing.Color.Goldenrod;
+            this.btnGunlukRapor.Location = new System.Drawing.Point(138, 242);
+            this.btnGunlukRapor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGunlukRapor.Name = "btnGunlukRapor";
-            this.btnGunlukRapor.Size = new System.Drawing.Size(144, 63);
+            this.btnGunlukRapor.Size = new System.Drawing.Size(287, 76);
             this.btnGunlukRapor.TabIndex = 0;
             this.btnGunlukRapor.Text = "Günlük Rapor";
-            this.btnGunlukRapor.UseVisualStyleBackColor = true;
+            this.btnGunlukRapor.UseVisualStyleBackColor = false;
             this.btnGunlukRapor.Click += new System.EventHandler(this.btnGunlukRapor_Click);
             // 
             // btnAylıkRapor
             // 
-            this.btnAylıkRapor.Location = new System.Drawing.Point(150, 219);
+            this.btnAylıkRapor.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAylıkRapor.BackColor = System.Drawing.Color.Black;
+            this.btnAylıkRapor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAylıkRapor.ForeColor = System.Drawing.Color.Goldenrod;
+            this.btnAylıkRapor.Location = new System.Drawing.Point(681, 242);
+            this.btnAylıkRapor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAylıkRapor.Name = "btnAylıkRapor";
-            this.btnAylıkRapor.Size = new System.Drawing.Size(144, 63);
+            this.btnAylıkRapor.Size = new System.Drawing.Size(287, 76);
             this.btnAylıkRapor.TabIndex = 1;
             this.btnAylıkRapor.Text = "Aylık Rapor";
-            this.btnAylıkRapor.UseVisualStyleBackColor = true;
+            this.btnAylıkRapor.UseVisualStyleBackColor = false;
             this.btnAylıkRapor.Click += new System.EventHandler(this.btnAylıkRapor_Click);
             // 
-            // AnaRapor
+            // FrmAnaRapor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = global::JavaVeJavacilar.Properties.Resources.background;
+            this.ClientSize = new System.Drawing.Size(1113, 550);
             this.Controls.Add(this.btnAylıkRapor);
             this.Controls.Add(this.btnGunlukRapor);
-            this.Name = "AnaRapor";
-            this.Text = "AnaRapor";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "FrmAnaRapor";
+            this.Text = "RAPOR CESITLERI";
             this.ResumeLayout(false);
 
         }
