@@ -41,7 +41,7 @@ namespace JavaVeJavacilar.Forms
             this.btnYonetici.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnYonetici.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnYonetici.ForeColor = System.Drawing.Color.Goldenrod;
-            this.btnYonetici.Location = new System.Drawing.Point(481, 312);
+            this.btnYonetici.Location = new System.Drawing.Point(180, 228);
             this.btnYonetici.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnYonetici.Name = "btnYonetici";
             this.btnYonetici.Size = new System.Drawing.Size(207, 71);
@@ -57,7 +57,7 @@ namespace JavaVeJavacilar.Forms
             this.btnGarson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGarson.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnGarson.ForeColor = System.Drawing.Color.Goldenrod;
-            this.btnGarson.Location = new System.Drawing.Point(735, 312);
+            this.btnGarson.Location = new System.Drawing.Point(582, 228);
             this.btnGarson.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGarson.Name = "btnGarson";
             this.btnGarson.Size = new System.Drawing.Size(207, 71);
@@ -71,7 +71,8 @@ namespace JavaVeJavacilar.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::JavaVeJavacilar.Properties.Resources.icon_back;
-            this.ClientSize = new System.Drawing.Size(1412, 533);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(954, 552);
             this.Controls.Add(this.btnGarson);
             this.Controls.Add(this.btnYonetici);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -83,6 +84,7 @@ namespace JavaVeJavacilar.Forms
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Java";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.Load += new System.EventHandler(this.frmYoneticiMiGarsonMi_Load);
             this.ResumeLayout(false);
 
         }

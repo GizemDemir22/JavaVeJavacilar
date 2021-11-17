@@ -33,5 +33,10 @@ namespace JavaVeJavacilar.Forms
 
             f.Show();
         }
+
+        private void frmYoneticiMiGarsonMi_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
